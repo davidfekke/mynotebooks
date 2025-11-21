@@ -1,0 +1,17 @@
+[workspace]
+authors = ["davidfekke <david@fekke.com>"]
+channels = ["conda-forge"]
+name = "lesson-03"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+jupyter = ">=1.1.1,<2"
+ipykernel = ">=7.1.0,<8"
+pandas = ">=2.3.3,<3"
+pip = ">=25.2,<26"
+numpy = ">=2.3.4,<3"
+matplotlib = ">=3.10.7,<4"
