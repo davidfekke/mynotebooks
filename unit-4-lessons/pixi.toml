@@ -1,0 +1,27 @@
+[workspace]
+authors = ["davidfekke <david@fekke.com>"]
+channels = ["conda-forge"]
+name = "unit-4-lessons"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+verify-tf = "python -c 'import tensorflow as tf, numpy as np; print(\"tf:\", tf.__version__); print(\"np:\", np.__version__); print(\"gpus:\", tf.config.list_physical_devices(\"GPU\"))'"
+
+[dependencies]
+python = "3.11.*"
+ipykernel = ">=7.2.0,<8"
+jupyter = ">=1.1.1,<2"
+# TensorFlow macOS wheels require NumPy <2.0; pin to a compatible release
+numpy = "1.26.4"
+# Remove conda TensorFlow (not available on osx-arm64 via conda); we'll use PyPI wheels below
+pytorch = ">=2.6.0,<3"
+scikit-learn = ">=1.8.0,<2"
+matplotlib = ">=3.10.8,<4"
+pandas = ">=3.0.0,<4"
+seaborn = ">=0.13.2,<0.14"
+
+[pypi-dependencies]
+# Apple Silicon TensorFlow + Metal plugin from PyPI
+tensorflow-macos = "==2.16.1"
+tensorflow-metal = "==1.1.*"

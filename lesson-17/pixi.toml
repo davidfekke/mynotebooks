@@ -1,0 +1,20 @@
+[workspace]
+authors = ["davidfekke <david@fekke.com>"]
+channels = ["conda-forge"]
+name = "lesson-17"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.11.*"
+ipykernel = ">=7.1.0,<8"
+jupyter = ">=1.1.1,<2"
+pandas = ">=2.3.3,<3"
+numpy = ">=2.3.5,<3"
+matplotlib = ">=3.10.8,<4"
+scikit-learn = "1.5.1.*"
+coremltools = ">=8.3,<9"
+skl2onnx = ">=1.19.1,<2"
+onnxruntime = ">=1.22.2,<2"

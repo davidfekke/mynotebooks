@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dataset - Capstone Project Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F5E6D3 0%, #E8D4C4 100%);
+            min-height: 100vh;
+            padding: 30px;
+            color: #4A3728;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 115, 85, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8B7355 0%, #6B5344 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 35px 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+            border-radius: 12px;
+            border-left: 4px solid #C65D00;
+        }
+
+        .intro h2 {
+            color: #C65D00;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #6B5344;
+            line-height: 1.6;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #FAFAFA;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #E8D4C4;
+        }
+
+        .card h3 {
+            color: #8B7355;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #C65D00;
+            border-radius: 50%;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #E8D4C4;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li .icon {
+            color: #C65D00;
+            font-weight: bold;
+            min-width: 20px;
+        }
+
+        .card li strong {
+            color: #6B5344;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .tip-card {
+            background: #FAFAFA;
+            border-radius: 10px;
+            padding: 15px 18px;
+            border-left: 4px solid #8B7355;
+        }
+
+        .tip-card.warning {
+            border-left-color: #C65D00;
+            background: #FFF8F5;
+        }
+
+        .tip-card.success {
+            border-left-color: #4A7C4E;
+            background: #F5FFF6;
+        }
+
+        .tip-card h4 {
+            color: #6B5344;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .tip-card.warning h4 {
+            color: #C65D00;
+        }
+
+        .tip-card.success h4 {
+            color: #4A7C4E;
+        }
+
+        .tip-card p {
+            color: #6B5344;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .models-preview {
+            background: linear-gradient(135deg, #6B5344 0%, #8B7355 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .models-preview h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .models-preview .models {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .models-preview .model-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .models-preview .more {
+            opacity: 0.8;
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .action-steps {
+            background: #F5E6D3;
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .action-steps h3 {
+            color: #6B5344;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #C65D00 0%, #A04D00 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 10px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #6B5344;
+            line-height: 1.4;
+        }
+
+        .step strong {
+            color: #C65D00;
+        }
+
+        .deadline-banner {
+            background: linear-gradient(135deg, #C65D00 0%, #A04D00 100%);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+        }
+
+        .deadline-banner strong {
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            background: #4A3728;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer p {
+            font-size: 0.95rem;
+        }
+
+        .footer .highlight {
+            color: #F5E6D3;
+            font-weight: 600;
+        }
+
+        .kaggle-link {
+            display: inline-block;
+            background: #20BEFF;
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+
+        .kaggle-link:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 700px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps {
+                flex-direction: column;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            body {
+                padding: 15px;
+            }
+            .content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Your First ML Project: Find Your Dataset!</h1>
+            <p>Choose data that excites YOU - this is YOUR project</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h2>What's This About?</h2>
+                <p>You're going to build real machine learning models on a dataset YOU choose. This will become your <strong>first GitHub portfolio project</strong>! Right now, focus on finding data that genuinely interests you.</p>
+            </div>
+
+            <div class="two-columns">
+                <div class="card">
+                    <h3>Dataset Requirements</h3>
+                    <ul>
+                        <li><span class="icon">1.</span> <strong>Format:</strong> CSV file</li>
+                        <li><span class="icon">2.</span> <strong>Columns:</strong> At least 6+ features</li>
+                        <li><span class="icon">3.</span> <strong>Target:</strong> A numerical column to predict</li>
+                        <li><span class="icon">4.</span> <strong>Size:</strong> 1,000 - 100,000 rows</li>
+                        <li><span class="icon">5.</span> <strong>Type:</strong> Tabular data (no images/audio)</li>
+                        <li><span class="icon">6.</span> <strong>Approval:</strong> Must be approved by Abishek</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Questions to Ask Yourself</h3>
+                    <ul>
+                        <li><span class="icon">?</span> What topics genuinely interest me?</li>
+                        <li><span class="icon">?</span> What <strong>number</strong> would I want to predict?</li>
+                        <li><span class="icon">?</span> What features might help make that prediction?</li>
+                        <li><span class="icon">?</span> Would I enjoy exploring this data?</li>
+                        <li><span class="icon">?</span> Could I talk about this in an interview?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card warning">
+                    <h4>Avoid Time Series Data</h4>
+                    <p>Skip datasets requiring date/time predictions (stock prices, weather, sales trends). We haven't covered time series yet!</p>
+                </div>
+                <div class="tip-card warning">
+                    <h4>Watch for Missing Data</h4>
+                    <p>Data doesn't need to be perfect, but if 20-30% or more is missing, it can be frustrating. Check before committing!</p>
+                </div>
+                <div class="tip-card warning">
+                    <h4>Target Must Be a Real Number</h4>
+                    <p>Your target needs to be an actual number (price, score) - not categories disguised as numbers (1, 2, 3 for "low, medium, high").</p>
+                </div>
+                <div class="tip-card warning">
+                    <h4>Avoid Overused Datasets</h4>
+                    <p>Titanic, Iris, Boston Housing - these are everywhere. Pick something unique that stands out in your portfolio!</p>
+                </div>
+                <div class="tip-card warning">
+                    <h4>Watch for Data Leakage</h4>
+                    <p>Avoid features that "give away" the answer - like having "total_cost" when predicting "price".</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Minimum Size: 1,000 Rows</h4>
+                    <p>Your dataset needs at least 1,000 rows to train reliable models. Ideally aim for 10,000+ rows for better results.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Too Big? Scale It Down</h4>
+                    <p>Massive datasets can crash your computer! If it's huge, you can sample or remove rows to make it manageable.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Skip Long Text Fields</h4>
+                    <p>Datasets with lots of text columns (descriptions, reviews) aren't ideal. Stick to numerical and categorical data.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Consider Domain Knowledge</h4>
+                    <p>Avoid datasets requiring deep expertise you don't have (specialized medical data) - unless it's YOUR field!</p>
+                </div>
+                <div class="tip-card success">
+                    <h4>Not Just Kaggle!</h4>
+                    <p>Found data from work or another website? That's fine! Just meet the requirements and get approval from Abishek.</p>
+                </div>
+            </div>
+
+            <div class="models-preview">
+                <h3>Models You'll Build</h3>
+                <div class="models">
+                    <span class="model-tag">Linear Regression</span>
+                    <span class="model-tag">Polynomial Regression</span>
+                    <span class="model-tag">Ridge Regression</span>
+                    <span class="model-tag">Lasso Regression</span>
+                    <span class="model-tag">Decision Trees</span>
+                </div>
+                <p class="more">...and more to come! For now, just focus on finding the right data.</p>
+            </div>
+
+            <div class="action-steps">
+                <h3>Your Next Steps</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Browse <strong>Kaggle.com</strong> and explore datasets that interest you</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Save links to <strong>2-3 datasets</strong> you like in your notes</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Send your top choice to <strong>Abishek on Slack</strong> for approval</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="deadline-banner">
+            <p>Dataset Approval Deadline: <strong>Wednesday, January 21</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>Take time to explore and find something that <span class="highlight">means something to you</span>.</p>
+            <a href="https://www.kaggle.com/datasets" class="kaggle-link" target="_blank">Explore Kaggle Datasets</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+David Fekke
+What are loss functions and what role do they play in training a neural network? Give an example of a loss function. A loss function computes the difference between the prediction and the actual result. This is used in backpropagation to apply a correction to the weight.
+
+What is the gradient in "gradient descent"? Why does the network move in the opposite direction of the gradient? The gradient is a measure of how steep the descent in the slope is. To reduce the loss, we move in the opposite direction of the loss.
+
+What is overfitting and what is underfitting in neural networks? What causes each problem? Overfitting is when you train the network to the point where it is memorizing the answer instead of actually making a prediction. Underfitting is when the network does not have enough training to make a good prediction. Overfitting could be caused by having too many parameters.
+
+What are epochs in neural network training? How do you decide how many epochs to train for? Epochs are the number of times a neural network has been trained over a complete set of the training data. It is normal to train over the same set of data more than one time. Each time is an epoch. Deciding how many epochs to use during training requires some trial and error. The goal is to use as many epochs as are needed to get the best prediction.

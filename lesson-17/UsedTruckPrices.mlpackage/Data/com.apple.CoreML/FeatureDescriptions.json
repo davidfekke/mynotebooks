@@ -1,0 +1,36 @@
+{
+  "Inputs" : {
+    "IS_AUTOMATIC" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Mileage" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "IS_V8" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "IS_HIGH_MILEAGE" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "IS_LONG_BED" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "IS_FOUR_WHEEL_DRIVE" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Age" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "Outputs" : {
+    "Price" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "TrainingInputs" : {
+
+  },
+  "States" : {
+
+  }
+}

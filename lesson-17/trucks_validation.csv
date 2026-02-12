@@ -1,0 +1,16 @@
+Year,Mileage,Transmission,Bed_Length,Four_Wheel_Drive,Engine,Condition,Previous_Owners,Price
+2020,32000,automatic,standard,yes,V8,8,1,29000
+2019,45000,automatic,long,no,V6,7,2,25800
+2021,30000,manual,standard,yes,V8,8,1,31500
+2018,58000,automatic,short,yes,V6,6,2,22500
+2017,75000,automatic,standard,no,V6,5,3,19000
+2022,18000,automatic,standard,yes,V8,9,1,34000
+2020,47000,manual,long,no,V8,6,2,26000
+2019,60000,automatic,standard,yes,V6,5,2,23500
+2021,19000,automatic,short,yes,V8,9,1,34500
+2018,72000,manual,standard,no,V6,5,3,19500
+2023,6000,automatic,standard,yes,V8,10,1,43000
+2017,92000,automatic,long,no,V6,4,4,16000
+2020,29000,automatic,standard,yes,V8,8,1,29500
+2019,58000,automatic,short,no,V6,5,2,23000
+2021,32000,automatic,standard,yes,V8,8,1,30500

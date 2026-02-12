@@ -1,0 +1,16 @@
+{
+  "name": "lesson-17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node onnxtest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "onnxruntime-node": "^1.23.2"
+  }
+}

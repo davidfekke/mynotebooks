@@ -1,0 +1,501 @@
+transaction_id,customer_id,date,product_category,product_name,quantity,unit_price,total_amount,payment_method,store_location,customer_age,is_member,customer_tier
+1165,109,2024-08-24,Home & Garden,plant pot,4,133.08,532.32,Credit Card,Mall,29.0,Yes,Bronze
+1384,127,2024-03-01,Electronics,  Headphones,3,257.78,773.34,Debit Card,Suburb,68.0,Yes,Platinum
+1046,211,2024-11-27,Clothing,  jeans,1,261.8,261.8,Credit Card,Suburb,34.0,No,Silver
+1157,188,2024-03-19,Electronics,Smart Watch  ,4,292.36,1169.44,Credit Card,Mall,53.0,Yes,Silver
+1054,180,2024-09-12,Electronics,tablet,3,289.74,869.22,Credit Card,Downtown,22.0,Yes,Bronze
+1073,211,2024-05-29,Sports,  Tennis Racket,1,225.66,225.66,Cash,Airport,54.0,Yes,Bronze
+1316,230,2024-09-17,Clothing,  jeans,2,198.61,397.22,Mobile Payment,Online,70.0,No,Bronze
+1210,129,2024-12-27,Home & Garden,  Lamp,5,387.31,1936.55,Cash,Online,32.0,No,Gold
+1075,198,2024-05-19,Home & Garden,PILLOW  ,1,296.35,296.35,Credit Card,Suburb,34.0,Yes,Silver
+1334,247,2024-07-31,Home & Garden,  Lamp,1,252.73,252.73,Debit Card,Mall,44.0,Yes,Silver
+1404,148,2024-09-04,Grocery,  Eggs ,4,175.76,703.04,Credit Card,Downtown,42.0,No,Bronze
+1416,165,2024-08-29,Clothing,  jeans,3,17.16,51.48,Credit Card,Downtown,46.0,Yes,Platinum
+1093,111,2024-05-04,Grocery,  Eggs ,1,56.75,56.75,Mobile Payment,Suburb,58.0,No,Gold
+1216,211,2024-08-21,Grocery,  Apples,5,210.91,1054.55,Credit Card,Suburb,43.0,Yes,Bronze
+1480,100,2024-10-09,Grocery,bread,1,481.06,481.06,Cash,Airport,45.0,Yes,Bronze
+1060,233,2024-03-15,Sports,dumbbells,1,62.45,62.45,Mobile Payment,Online,38.0,No,Bronze
+1369,237,2024-07-15,Sports,  Basketball,4,470.63,1882.52,Mobile Payment,Online,19.0,No,Bronze
+1164,150,2024-04-07,Electronics,Smart Watch  ,1,75.13,75.13,Mobile Payment,Online,42.0,No,Silver
+1211,193,2024-11-02,Electronics,Smart Watch  ,3,159.39,478.17,Credit Card,Suburb,61.0,Yes,Silver
+1252,210,2024-09-17,Clothing,Jacket,4,230.39,921.56,Mobile Payment,Airport,25.0,Yes,Bronze
+1444,117,2024-03-10,Clothing,Jacket,2,107.4,214.8,Mobile Payment,Mall,52.0,No,Silver
+1321,184,2024-02-05,Sports,YOGA MAT  ,2,244.05,488.1,Cash,Suburb,18.0,No,Bronze
+1290,180,2024-05-21,Electronics,SMARTPHONE,4,240.7,962.8,Debit Card,Airport,59.0,Yes,Bronze
+1390,131,2024-07-31,Electronics,tablet,3,221.89,665.67,Cash,Suburb,64.0,Yes,Bronze
+1008,176,2024-06-23,Grocery,CHEESE,4,349.9,1399.6,Cash,Mall,57.0,No,Silver
+1463,229,2024-09-16,Home & Garden,PILLOW  ,4,162.86,651.44,Debit Card,Mall,22.0,Yes,Gold
+1250,179,2024-05-16,Home & Garden,  Lamp,4,153.63,614.52,Debit Card,Airport,66.0,Yes,Bronze
+1229,204,2024-01-02,Home & Garden,PILLOW  ,4,406.04,1624.16,Mobile Payment,Downtown,65.0,Yes,Silver
+1246,183,2024-05-24,Sports,YOGA MAT  ,1,61.97,61.97,Cash,Mall,55.0,Yes,Silver
+1212,203,2024-06-01,Home & Garden,PILLOW  ,5,425.34,2126.7,Credit Card,Mall,20.0,Yes,Bronze
+1130,175,2024-10-27,Home & Garden,  Curtains,2,325.75,651.5,Cash,Mall,62.0,No,Silver
+1163,241,2024-10-23,Grocery,  Apples,3,340.18,1020.54,Debit Card,Mall,22.0,Yes,Bronze
+1224,132,2024-12-03,Clothing,Jacket,1,86.36,86.36,Mobile Payment,Downtown,40.0,Yes,Bronze
+1042,149,2024-09-07,Sports,BICYCLE  ,2,492.03,984.06,Mobile Payment,Online,50.0,Yes,Platinum
+1279,207,2024-03-17,Electronics,Smart Watch  ,5,125.74,628.7,Mobile Payment,Online,24.0,Yes,Platinum
+1022,197,2024-08-16,Grocery,bread,4,91.35,365.4,Credit Card,Mall,36.0,No,Gold
+1435,144,2024-10-02,Home & Garden,  Curtains,5,84.27,421.35,Credit Card,Downtown,68.0,No,Bronze
+1069,245,2024-09-04,Electronics,Smart Watch  ,2,282.13,564.26,Debit Card,Suburb,61.0,No,Bronze
+1228,177,2024-06-25,Grocery,MILK  ,2,479.44,958.88,Mobile Payment,Downtown,37.0,No,Silver
+1152,203,2024-06-19,Sports,BICYCLE  ,1,,,Cash,Airport,56.0,No,Silver
+1370,240,2024-10-09,Home & Garden,  Lamp,1,205.5,205.5,Mobile Payment,Suburb,23.0,Yes,Bronze
+1218,100,2024-10-05,Sports,  Basketball,3,96.3,288.9,Cash,Online,36.0,Yes,Silver
+1155,177,2024-07-12,Grocery,bread,4,322.04,1288.16,Cash,Online,66.0,Yes,Bronze
+1178,173,2024-08-21,Electronics,  Headphones,5,218.91,1094.55,Credit Card,Downtown,46.0,Yes,Gold
+1398,153,2024-06-13,Clothing,  SNEAKERS ,4,19.45,77.8,Mobile Payment,Online,42.0,No,Bronze
+1140,210,2024-04-06,Home & Garden,RUG  ,5,308.98,1544.9,Debit Card,Downtown,43.0,No,Silver
+1142,248,2024-12-23,Sports,  Tennis Racket,4,102.68,410.72,Mobile Payment,Downtown,70.0,No,Bronze
+1327,182,2024-05-02,Electronics,  Headphones,2,298.14,596.28,Mobile Payment,Downtown,60.0,No,Silver
+1176,219,2024-10-19,Electronics,Smart Watch  ,2,197.47,394.94,Debit Card,Downtown,19.0,Yes,Silver
+1171,213,2024-07-15,Clothing,T-SHIRT  ,4,,,Debit Card,Downtown,48.0,Yes,Bronze
+1089,213,2024-04-29,Grocery,MILK  ,3,106.86,320.58,Mobile Payment,Airport,28.0,No,Platinum
+1097,154,2024-07-29,Clothing,Jacket,2,,,Debit Card,Airport,52.0,No,Gold
+1440,230,2024-01-23,Clothing,T-SHIRT  ,3,405.32,1215.96,Cash,Airport,32.0,Yes,Platinum
+1304,221,2024-06-11,Grocery,  Eggs ,2,35.97,71.94,Credit Card,,26.0,No,Gold
+1051,143,2024-08-30,Grocery,  Eggs ,1,55.37,55.37,Debit Card,,65.0,Yes,Silver
+1200,121,2024-12-27,Grocery,CHEESE,1,436.63,436.63,Cash,Suburb,43.0,No,Gold
+1298,172,2024-07-14,Electronics,tablet,4,97.55,390.2,Credit Card,Airport,68.0,Yes,Bronze
+1132,231,2024-07-16,Electronics,SMARTPHONE,5,166.36,831.8,Debit Card,Mall,69.0,Yes,Bronze
+1121,185,2024-12-05,Home & Garden,RUG  ,1,231.49,231.49,Credit Card,Mall,52.0,No,Bronze
+1359,123,2024-11-29,Home & Garden,RUG  ,2,134.86,269.72,Mobile Payment,Downtown,36.0,No,Bronze
+1181,160,2024-03-18,Clothing,  jeans,2,432.01,864.02,Debit Card,Suburb,58.0,Yes,Bronze
+1371,179,2024-09-10,Clothing,  jeans,1,266.22,266.22,Cash,Airport,27.0,No,Bronze
+1038,157,2024-01-19,Home & Garden,  Curtains,1,321.36,321.36,Cash,Downtown,37.0,No,Gold
+1161,150,2024-03-05,Sports,BICYCLE  ,5,300.5,1502.5,Credit Card,Online,61.0,No,Bronze
+1005,137,2024-09-14,Clothing,T-SHIRT  ,1,307.6,307.6,Cash,Suburb,68.0,No,Bronze
+1094,106,2024-10-29,Sports,  Basketball,4,295.57,1182.28,Cash,Online,64.0,No,Silver
+1305,111,2024-06-18,Sports,BICYCLE  ,5,177.22,886.1,Debit Card,Online,59.0,Yes,Bronze
+1189,162,2024-02-21,Grocery,MILK  ,1,423.53,423.53,Credit Card,Mall,41.0,No,Gold
+1375,221,2024-08-13,Electronics,tablet,2,310.59,621.18,Cash,Airport,18.0,No,Bronze
+1454,118,2024-02-21,Home & Garden,PILLOW  ,1,407.8,407.8,Mobile Payment,Downtown,53.0,No,Platinum
+1095,216,2024-09-26,Electronics,SMARTPHONE,4,354.46,1417.84,Debit Card,Online,53.0,Yes,Gold
+1469,206,2024-08-21,Home & Garden,plant pot,4,152.24,608.96,Cash,Online,27.0,No,Bronze
+1293,247,2024-01-08,Electronics,SMARTPHONE,2,309.17,618.34,Cash,Downtown,25.0,Yes,Bronze
+1341,149,2024-03-14,Home & Garden,plant pot,5,46.95,234.75,Cash,Suburb,20.0,No,Gold
+1408,198,2024-07-28,Electronics,Smart Watch  ,2,71.3,142.6,Debit Card,Downtown,18.0,Yes,Silver
+1409,226,2024-12-01,Grocery,bread,1,63.34,63.34,Debit Card,Downtown,54.0,No,Silver
+1188,202,2024-03-20,Sports,  Basketball,2,156.16,312.32,Credit Card,Airport,56.0,Yes,Gold
+1335,162,2024-02-08,Home & Garden,plant pot,5,95.61,478.05,Debit Card,Mall,43.0,Yes,Bronze
+1214,137,2024-08-28,Sports,YOGA MAT  ,3,348.25,1044.75,Cash,Online,52.0,No,Bronze
+1128,101,2024-05-15,Home & Garden,RUG  ,2,257.86,515.72,Cash,Mall,53.0,No,Bronze
+1012,127,2024-06-22,Home & Garden,plant pot,5,212.03,1060.15,Mobile Payment,,23.0,No,Gold
+1007,208,2024-11-15,Grocery,MILK  ,3,73.24,219.72,Debit Card,Online,37.0,Yes,Silver
+1443,156,2024-12-20,Electronics,tablet,5,194.94,974.7,Cash,Mall,31.0,No,Bronze
+1247,145,2024-07-22,Home & Garden,RUG  ,5,96.95,484.75,Mobile Payment,Suburb,65.0,Yes,Bronze
+1397,232,2024-11-28,Electronics,Smart Watch  ,3,319.57,958.71,Credit Card,Airport,65.0,No,Bronze
+1426,218,2024-02-11,Grocery,  Apples,2,348.25,696.5,Credit Card,,64.0,Yes,Bronze
+1346,112,2024-06-17,Clothing,dress,3,324.4,973.2,Credit Card,Mall,40.0,No,Silver
+1090,242,2024-12-11,Sports,YOGA MAT  ,2,499.95,999.9,Cash,Downtown,31.0,No,Silver
+1427,163,2024-09-30,Home & Garden,RUG  ,5,279.68,1398.4,Cash,Online,44.0,Yes,Gold
+1027,131,2024-07-13,Grocery,CHEESE,2,247.37,494.74,Credit Card,Airport,59.0,Yes,Silver
+1078,216,2024-06-11,Electronics,SMARTPHONE,4,74.45,297.8,Mobile Payment,Mall,50.0,No,Bronze
+1185,134,2024-11-16,Home & Garden,PILLOW  ,3,,,Credit Card,Airport,27.0,No,Silver
+1263,218,2024-09-06,Electronics,Smart Watch  ,3,228.25,684.75,Debit Card,,28.0,No,Gold
+1208,235,2024-10-04,Clothing,dress,1,31.54,31.54,Cash,Mall,29.0,Yes,Silver
+1183,243,2024-01-19,Home & Garden,plant pot,5,182.72,913.6,Cash,Downtown,32.0,No,Gold
+1096,181,2024-11-12,Sports,BICYCLE  ,5,9.74,48.7,Debit Card,Downtown,57.0,Yes,Silver
+1101,213,2024-02-05,Home & Garden,  Lamp,2,72.58,145.16,Cash,Downtown,34.0,Yes,Silver
+1420,229,2024-04-30,Sports,  Basketball,4,,,Debit Card,Downtown,30.0,No,Silver
+1395,209,2024-11-19,Electronics,  Laptop ,5,,,Credit Card,Online,25.0,Yes,Bronze
+1156,240,2024-12-16,Home & Garden,  Lamp,4,255.19,1020.76,Credit Card,Airport,29.0,Yes,Bronze
+1231,214,2024-05-27,Grocery,CHEESE,1,250.01,250.01,Cash,Mall,60.0,Yes,Bronze
+1363,140,2024-04-26,Grocery,bread,3,343.92,1031.76,Cash,Downtown,69.0,No,Silver
+1238,221,2024-02-16,Clothing,  jeans,4,210.74,842.96,Credit Card,Online,54.0,Yes,Bronze
+1354,215,2024-08-10,Grocery,CHEESE,5,420.75,2103.75,Debit Card,Downtown,21.0,Yes,Silver
+1086,166,2024-02-20,Clothing,  SNEAKERS ,3,246.91,740.73,Credit Card,Downtown,66.0,Yes,Gold
+1324,163,2024-11-20,Electronics,Smart Watch  ,4,45.92,183.68,Debit Card,Suburb,53.0,Yes,Bronze
+1172,170,2024-12-26,Sports,  Basketball,4,20.28,81.12,Mobile Payment,Mall,47.0,No,Silver
+1394,233,2024-02-21,Electronics,  Headphones,2,381.72,763.44,Credit Card,Airport,59.0,Yes,Gold
+1154,224,2024-08-15,Sports,BICYCLE  ,3,149.58,448.74,Debit Card,Suburb,53.0,Yes,Bronze
+1314,161,2024-03-26,Sports,dumbbells,4,141.05,564.2,Debit Card,Suburb,,Yes,Bronze
+1039,170,2024-12-21,Clothing,Jacket,2,,,Debit Card,Airport,36.0,Yes,Bronze
+1393,212,2024-06-02,Grocery,  Eggs ,5,88.26,441.3,Cash,Downtown,60.0,No,Bronze
+1070,119,2024-01-15,Grocery,MILK  ,4,231.37,925.48,Cash,Downtown,22.0,Yes,Gold
+1107,173,2024-01-24,Clothing,  SNEAKERS ,2,372.55,745.1,Mobile Payment,Mall,34.0,Yes,Gold
+1349,160,2024-06-15,Clothing,Jacket,2,384.13,768.26,Mobile Payment,Downtown,24.0,No,Silver
+1005,169,2024-01-29,Electronics,  Headphones,3,277.11,831.33,Debit Card,Suburb,30.0,No,Gold
+1429,185,2024-05-30,Clothing,T-SHIRT  ,2,61.04,122.08,Cash,Suburb,64.0,No,Gold
+1159,181,2024-07-02,Grocery,  Apples,4,61.53,246.12,Debit Card,Suburb,55.0,No,Bronze
+1032,238,2024-07-10,Clothing,  jeans,1,,,Cash,Airport,49.0,No,Gold
+1245,120,2024-08-08,Clothing,  SNEAKERS ,5,412.52,2062.6,Cash,Downtown,39.0,No,Silver
+1009,135,2024-03-15,Sports,  Tennis Racket,4,186.6,746.4,Mobile Payment,Downtown,40.0,Yes,Gold
+1268,138,2024-05-05,Clothing,  SNEAKERS ,4,412.19,1648.76,Debit Card,Downtown,26.0,No,Gold
+1001,159,2024-09-28,Electronics,  Headphones,5,25.6,128.0,Debit Card,Downtown,60.0,No,Bronze
+1234,198,2024-07-29,Clothing,  jeans,5,360.9,1804.5,Cash,Mall,,Yes,Bronze
+1262,139,2024-10-16,Home & Garden,plant pot,2,275.44,550.88,Cash,Mall,33.0,Yes,Bronze
+1402,154,2024-12-15,Home & Garden,RUG  ,4,494.94,1979.76,Credit Card,Suburb,24.0,Yes,Silver
+1292,116,2024-04-02,Sports,YOGA MAT  ,2,55.7,111.4,Mobile Payment,Suburb,36.0,No,Gold
+1199,206,2024-03-28,Sports,dumbbells,3,,,Credit Card,Airport,57.0,No,Gold
+1133,204,2024-03-30,Home & Garden,plant pot,2,376.92,753.84,Cash,Online,22.0,Yes,Bronze
+1325,184,2024-02-10,Sports,dumbbells,3,152.37,457.11,Debit Card,Suburb,120.0,No,Silver
+1323,238,2024-11-08,Sports,  Tennis Racket,1,499.66,499.66,Cash,Downtown,,No,Silver
+1003,219,2024-07-14,Grocery,MILK  ,4,227.62,910.48,Credit Card,Suburb,49.0,Yes,Bronze
+1019,206,2024-11-13,Grocery,bread,3,177.55,532.65,Mobile Payment,Suburb,46.0,No,Bronze
+1004,115,2024-12-15,Clothing,dress,1,409.28,409.28,Cash,Mall,39.0,Yes,Bronze
+1264,152,2024-05-03,Home & Garden,RUG  ,5,222.34,1111.7,Debit Card,Downtown,57.0,No,Platinum
+1077,207,2024-09-11,Electronics,  Laptop ,2,497.01,994.02,Credit Card,Airport,60.0,No,Bronze
+1254,199,2024-10-25,Home & Garden,plant pot,1,388.94,388.94,Cash,Airport,37.0,Yes,Silver
+1315,249,2024-03-14,Home & Garden,PILLOW  ,3,122.29,366.87,Debit Card,Airport,62.0,Yes,Silver
+1352,105,2024-04-28,Grocery,  Eggs ,4,406.3,1625.2,Debit Card,Suburb,55.0,Yes,Bronze
+1472,247,2024-08-24,Grocery,  Apples,5,296.02,1480.1,Cash,Airport,27.0,No,Platinum
+1144,197,2024-11-22,Sports,dumbbells,5,178.56,892.8,Credit Card,Airport,54.0,Yes,Platinum
+1450,222,2024-05-10,Electronics,  Headphones,1,356.82,356.82,Debit Card,Airport,54.0,No,Bronze
+1067,101,2024-08-23,Grocery,MILK  ,1,318.22,318.22,Mobile Payment,Mall,41.0,No,Silver
+1180,190,2024-05-10,Sports,YOGA MAT  ,2,87.16,174.32,Credit Card,Downtown,69.0,No,Bronze
+1134,176,2024-12-07,Electronics,  Laptop ,5,73.92,369.6,Debit Card,Mall,38.0,Yes,Bronze
+1145,199,2024-01-05,Grocery,  Apples,5,107.28,536.4,Cash,Downtown,45.0,No,Bronze
+1407,207,2024-08-26,Home & Garden,plant pot,2,107.44,214.88,Cash,Mall,28.0,Yes,Silver
+1281,237,2024-05-27,Home & Garden,  Curtains,4,34.38,137.52,Credit Card,Downtown,18.0,No,Silver
+1270,239,2024-12-12,Electronics,Smart Watch  ,2,178.65,357.3,Debit Card,Airport,38.0,No,Bronze
+1467,156,2024-10-06,Electronics,  Headphones,3,144.14,432.42,Debit Card,Online,33.0,No,Bronze
+1209,224,2024-03-21,Grocery,MILK  ,3,271.69,815.07,Credit Card,Airport,68.0,No,Gold
+1146,156,2024-02-07,Grocery,MILK  ,1,165.21,165.21,Credit Card,Online,32.0,Yes,Bronze
+1433,169,2024-08-14,Electronics,tablet,2,353.51,707.02,Credit Card,Airport,63.0,No,Bronze
+1278,211,2024-06-25,Electronics,Smart Watch  ,2,148.22,296.44,Mobile Payment,Mall,65.0,No,Silver
+1342,224,2024-10-27,Sports,dumbbells,1,137.33,137.33,Mobile Payment,Online,59.0,Yes,Platinum
+1466,107,2024-06-02,Sports,YOGA MAT  ,4,,,Mobile Payment,Airport,45.0,No,Bronze
+1318,199,2024-11-23,Sports,YOGA MAT  ,2,492.82,985.64,Cash,Suburb,35.0,No,Silver
+1018,186,2024-08-05,Home & Garden,  Curtains,5,341.25,1706.25,Mobile Payment,Online,-5.0,No,Gold
+1449,203,2024-12-19,Home & Garden,RUG  ,2,52.14,104.28,Mobile Payment,Downtown,26.0,No,Bronze
+1021,142,2024-05-08,Sports,  Tennis Racket,4,481.57,1926.28,Mobile Payment,Mall,61.0,No,Silver
+1131,219,2024-08-21,Sports,  Tennis Racket,2,393.92,787.84,Debit Card,Airport,64.0,No,Bronze
+1239,132,2024-06-03,Electronics,tablet,5,459.79,2298.95,Mobile Payment,,39.0,Yes,Silver
+1297,236,2024-04-11,Home & Garden,  Curtains,3,496.28,1488.84,Credit Card,Downtown,48.0,Yes,Silver
+1287,106,2024-07-15,Sports,  Basketball,3,434.19,1302.57,Mobile Payment,Airport,47.0,Yes,Silver
+1337,200,2024-09-04,Clothing,T-SHIRT  ,4,67.81,271.24,Cash,Airport,46.0,Yes,Bronze
+1301,244,2024-02-24,Grocery,  Eggs ,4,433.71,1734.84,Cash,,40.0,No,Gold
+1150,106,2024-05-01,Sports,BICYCLE  ,5,128.59,642.95,Mobile Payment,,67.0,Yes,Bronze
+1204,121,2024-07-14,Home & Garden,  Curtains,3,357.14,1071.42,Credit Card,Suburb,37.0,No,Bronze
+1388,209,2024-10-19,Sports,YOGA MAT  ,3,415.1,1245.3,Credit Card,Suburb,49.0,No,Bronze
+1399,134,2024-07-02,Clothing,  jeans,3,381.93,1145.79,Debit Card,Downtown,53.0,Yes,Silver
+1191,218,2024-10-21,Electronics,Smart Watch  ,3,339.74,1019.22,Credit Card,Online,24.0,Yes,Silver
+1202,146,2024-05-31,Home & Garden,plant pot,5,247.28,1236.4,Debit Card,Online,29.0,Yes,Bronze
+1419,112,2024-12-24,Electronics,  Laptop ,4,290.83,1163.32,Debit Card,,59.0,No,Silver
+1015,166,2024-05-31,Grocery,  Apples,4,138.01,552.04,Credit Card,Mall,56.0,Yes,Bronze
+1056,197,2024-01-12,Electronics,tablet,1,210.04,210.04,Credit Card,Suburb,23.0,Yes,Silver
+1076,183,2024-12-03,Sports,  Tennis Racket,4,228.74,914.96,Debit Card,Online,35.0,No,Bronze
+1285,154,2024-07-21,Clothing,dress,3,318.65,955.95,Cash,Online,5.0,No,Silver
+1040,216,2024-05-20,Electronics,  Headphones,2,440.66,881.32,Mobile Payment,Online,26.0,Yes,Bronze
+1392,183,2024-01-05,Clothing,Jacket,3,51.08,153.24,Cash,Downtown,52.0,No,Platinum
+1461,186,2024-10-16,Home & Garden,RUG  ,3,260.23,780.69,Credit Card,Airport,30.0,No,Bronze
+1258,197,2024-12-17,Home & Garden,  Lamp,4,142.72,570.88,Credit Card,,34.0,No,Bronze
+1179,171,2024-01-26,Sports,  Basketball,1,468.49,468.49,Debit Card,Airport,64.0,No,Bronze
+1213,207,2024-11-06,Sports,  Tennis Racket,5,187.69,938.45,Mobile Payment,Suburb,58.0,Yes,Gold
+1473,164,2024-09-11,Sports,YOGA MAT  ,2,475.38,950.76,Credit Card,,22.0,No,Gold
+1421,120,2024-05-26,Clothing,Jacket,2,167.01,334.02,Mobile Payment,Mall,,Yes,Bronze
+1068,220,2024-04-27,Grocery,bread,1,6.22,6.22,Cash,Online,22.0,Yes,Silver
+1100,104,2024-11-06,Grocery,  Eggs ,3,388.2,1164.6,Mobile Payment,Online,19.0,Yes,Gold
+1477,238,2024-06-29,Grocery,bread,5,367.7,1838.5,Cash,Downtown,50.0,Yes,Silver
+1098,113,2024-04-22,Home & Garden,  Lamp,5,366.81,1834.05,Credit Card,Downtown,58.0,No,Silver
+1197,189,2024-11-21,Home & Garden,  Curtains,5,231.93,1159.65,Credit Card,Mall,19.0,No,Bronze
+1340,157,2024-04-07,Grocery,  Apples,4,333.75,1335.0,Debit Card,,70.0,Yes,Bronze
+1289,117,2024-11-13,Sports,BICYCLE  ,3,182.32,546.96,Cash,Airport,55.0,No,Gold
+1319,110,2024-05-08,Electronics,Smart Watch  ,2,36.35,72.7,Cash,Airport,,No,Gold
+1458,107,2024-12-13,Grocery,MILK  ,2,269.54,539.08,Mobile Payment,Mall,43.0,No,Silver
+1125,163,2024-12-03,Electronics,tablet,3,112.83,338.49,Debit Card,Downtown,67.0,No,Bronze
+1243,151,2024-12-14,Grocery,CHEESE,2,217.67,435.34,Debit Card,Airport,55.0,No,Bronze
+1043,105,2024-03-11,Electronics,tablet,4,109.87,439.48,Debit Card,Suburb,31.0,No,Silver
+1061,139,2024-11-17,Sports,  Basketball,5,,,Cash,Mall,20.0,No,Gold
+1193,161,2024-02-19,Home & Garden,  Curtains,2,415.03,830.06,Credit Card,Suburb,53.0,Yes,Gold
+1423,132,2024-11-17,Grocery,CHEESE,4,172.19,688.76,Credit Card,Suburb,34.0,No,Gold
+1267,221,2024-11-26,Grocery,  Eggs ,5,291.08,1455.4,Mobile Payment,Downtown,52.0,Yes,Silver
+1255,129,2024-01-21,Sports,BICYCLE  ,3,285.24,855.72,Mobile Payment,Online,52.0,No,Bronze
+1385,244,2024-06-07,Clothing,Jacket,3,245.24,735.72,Cash,Mall,48.0,Yes,Bronze
+1013,155,2024-08-13,Grocery,CHEESE,4,175.15,700.6,Credit Card,Online,-5.0,Yes,Gold
+1227,219,2024-01-18,Electronics,Smart Watch  ,4,342.86,1371.44,Debit Card,Airport,67.0,No,Silver
+1011,165,2024-10-23,Sports,  Basketball,4,28.96,115.84,Credit Card,,27.0,No,Bronze
+1114,194,2024-07-05,Clothing,  jeans,2,54.29,108.58,Mobile Payment,Mall,41.0,No,Bronze
+1020,142,2024-03-08,Grocery,  Apples,3,393.03,1179.09,Credit Card,Downtown,43.0,No,Silver
+1219,129,2024-02-16,Grocery,  Eggs ,2,232.49,464.98,Debit Card,Airport,32.0,No,Bronze
+1119,141,2024-05-31,Home & Garden,plant pot,2,66.5,133.0,Mobile Payment,Airport,67.0,Yes,Bronze
+1365,179,2024-06-16,Clothing,Jacket,5,429.54,2147.7,Cash,Online,55.0,No,Silver
+1386,127,2024-07-31,Sports,BICYCLE  ,4,223.44,893.76,Credit Card,,64.0,No,Silver
+1438,248,2024-03-30,Electronics,tablet,2,,,Credit Card,Downtown,36.0,No,Silver
+1294,106,2024-04-12,Grocery,MILK  ,5,479.23,2396.15,Cash,Airport,26.0,Yes,Bronze
+1009,179,2024-03-08,Sports,YOGA MAT  ,1,105.15,105.15,Cash,Airport,47.0,Yes,Silver
+1379,247,2024-10-03,Home & Garden,RUG  ,5,345.85,1729.25,Debit Card,Suburb,50.0,No,Bronze
+1242,196,2024-07-06,Grocery,CHEESE,1,70.3,70.3,Credit Card,Downtown,50.0,No,Bronze
+1447,201,2024-09-28,Clothing,  SNEAKERS ,1,326.75,326.75,Mobile Payment,Airport,23.0,No,Silver
+1436,150,2024-09-13,Sports,BICYCLE  ,1,83.69,83.69,Credit Card,,43.0,Yes,Silver
+1028,119,2024-05-19,Electronics,  Laptop ,1,466.7,466.7,Debit Card,Downtown,41.0,Yes,Gold
+1221,162,2024-03-25,Home & Garden,  Lamp,4,140.64,562.56,Mobile Payment,,50.0,Yes,Silver
+1470,126,2024-05-11,Sports,  Basketball,2,329.02,658.04,Mobile Payment,Airport,18.0,No,Silver
+1087,177,2024-09-03,Grocery,MILK  ,2,128.94,257.88,Mobile Payment,Downtown,60.0,Yes,Bronze
+1362,130,2024-05-31,Electronics,tablet,1,189.06,189.06,Debit Card,Online,33.0,No,Bronze
+1104,244,2024-06-22,Grocery,  Eggs ,2,452.38,904.76,Credit Card,Online,69.0,No,Bronze
+1482,110,2024-02-28,Grocery,CHEESE,1,86.93,86.93,Mobile Payment,Downtown,57.0,No,Bronze
+1026,188,2024-08-27,Clothing,  SNEAKERS ,2,201.19,402.38,Cash,,61.0,No,Platinum
+1308,236,2024-02-08,Clothing,  jeans,5,156.23,781.15,Debit Card,Online,28.0,No,Bronze
+1168,209,2024-03-13,Grocery,CHEESE,4,351.22,1404.88,Mobile Payment,Online,66.0,No,Gold
+1451,194,2024-04-25,Home & Garden,RUG  ,3,120.9,362.7,Debit Card,Suburb,,No,Silver
+1476,117,2024-12-12,Clothing,  jeans,1,329.47,329.47,Cash,Online,26.0,No,Gold
+1411,229,2024-12-11,Clothing,Jacket,5,353.33,1766.65,Mobile Payment,Online,,No,Silver
+1222,187,2024-07-22,Clothing,dress,5,5.54,27.7,Credit Card,Mall,28.0,No,Silver
+1417,103,2024-10-12,Clothing,Jacket,4,241.02,964.08,Debit Card,Airport,29.0,Yes,Silver
+1106,207,2024-07-06,Electronics,SMARTPHONE,4,70.69,282.76,Mobile Payment,,54.0,Yes,Bronze
+1372,225,2024-02-16,Grocery,  Eggs ,1,116.96,116.96,Mobile Payment,Suburb,54.0,Yes,Silver
+1091,127,2024-07-21,Electronics,Smart Watch  ,1,341.59,341.59,Debit Card,Downtown,60.0,Yes,Bronze
+1453,210,2024-01-08,Sports,dumbbells,5,9.6,48.0,Cash,Mall,27.0,Yes,Bronze
+1169,192,2024-05-15,Sports,BICYCLE  ,5,349.32,1746.6,Debit Card,Airport,65.0,No,Silver
+1241,217,2024-10-01,Sports,dumbbells,4,409.47,1637.88,Credit Card,Suburb,64.0,Yes,Bronze
+1403,139,2024-03-04,Electronics,Smart Watch  ,1,494.14,494.14,Cash,Online,48.0,Yes,Platinum
+1049,211,2024-08-20,Grocery,CHEESE,1,214.05,214.05,Credit Card,Online,40.0,Yes,Platinum
+1105,145,2024-07-07,Sports,BICYCLE  ,5,70.43,352.15,Credit Card,Online,20.0,No,Gold
+1207,233,2024-12-10,Clothing,  SNEAKERS ,3,40.06,120.18,Debit Card,Airport,32.0,Yes,Bronze
+1248,169,2024-12-10,Sports,BICYCLE  ,5,194.62,973.1,Mobile Payment,Suburb,66.0,Yes,Bronze
+1201,237,2024-05-14,Home & Garden,plant pot,3,366.73,1100.19,Cash,Airport,49.0,Yes,Gold
+1063,223,2024-10-26,Clothing,  SNEAKERS ,1,55.7,55.7,Credit Card,Downtown,32.0,No,Silver
+1478,219,2024-07-14,Clothing,T-SHIRT  ,5,160.11,800.55,Mobile Payment,Downtown,5.0,Yes,Platinum
+1148,211,2024-11-22,Clothing,Jacket,4,441.09,1764.36,Mobile Payment,Mall,34.0,Yes,Platinum
+1147,168,2024-07-09,Sports,dumbbells,2,72.88,145.76,Mobile Payment,Downtown,41.0,No,Gold
+1226,182,2024-02-25,Clothing,T-SHIRT  ,1,387.86,387.86,Cash,Suburb,32.0,Yes,Bronze
+1422,162,2024-12-11,Home & Garden,  Curtains,1,377.81,377.81,Mobile Payment,Suburb,20.0,Yes,Bronze
+1485,122,2024-04-29,Electronics,Smart Watch  ,5,70.91,354.55,Debit Card,Suburb,60.0,No,Gold
+1007,171,2024-08-29,Home & Garden,plant pot,2,496.51,993.02,Credit Card,Online,31.0,Yes,Bronze
+1452,215,2024-01-13,Grocery,  Apples,2,75.71,151.42,Mobile Payment,Online,51.0,Yes,Bronze
+1110,162,2024-11-13,Clothing,dress,2,267.6,535.2,Credit Card,Suburb,68.0,No,Silver
+1295,218,2024-10-14,Home & Garden,  Curtains,5,9.19,45.95,Cash,Downtown,41.0,No,Platinum
+1441,245,2024-06-16,Sports,dumbbells,5,326.76,1633.8,Credit Card,Downtown,42.0,Yes,Silver
+1122,197,2024-11-08,Grocery,CHEESE,3,222.85,668.55,Mobile Payment,,48.0,Yes,Silver
+1266,186,2024-04-23,Home & Garden,RUG  ,3,362.6,1087.8,Cash,Airport,47.0,No,Bronze
+1170,107,2024-11-27,Clothing,  jeans,3,315.9,947.7,Cash,Mall,20.0,No,Silver
+1382,226,2024-02-02,Sports,  Basketball,4,79.93,319.72,Cash,Airport,20.0,Yes,Platinum
+1035,183,2024-11-21,Clothing,dress,1,208.8,208.8,Cash,Downtown,59.0,Yes,Bronze
+1269,146,2024-08-25,Grocery,  Eggs ,3,344.85,1034.55,Cash,Suburb,38.0,Yes,Silver
+1031,224,2024-12-24,Home & Garden,PILLOW  ,4,430.68,1722.72,Credit Card,Online,24.0,Yes,Gold
+1401,154,2024-06-03,Clothing,dress,4,,,Mobile Payment,Mall,63.0,Yes,Silver
+1462,190,2024-11-28,Grocery,CHEESE,5,54.73,273.65,Credit Card,Mall,51.0,No,Silver
+1355,166,2024-07-28,Sports,  Tennis Racket,2,377.46,754.92,Mobile Payment,Downtown,58.0,No,Silver
+1383,187,2024-02-29,Home & Garden,PILLOW  ,2,296.84,593.68,Cash,Airport,35.0,No,Bronze
+1011,171,2024-03-12,Home & Garden,PILLOW  ,3,,,Cash,Mall,65.0,No,Bronze
+1174,170,2024-01-24,Grocery,  Apples,1,481.81,481.81,Debit Card,Airport,34.0,No,Gold
+1343,242,2024-01-20,Home & Garden,RUG  ,1,160.68,160.68,Debit Card,Mall,55.0,No,Gold
+1116,102,2024-06-04,Sports,  Basketball,1,,,Credit Card,Suburb,52.0,Yes,Gold
+1364,232,2024-09-09,Sports,YOGA MAT  ,4,142.1,568.4,Credit Card,,54.0,Yes,Gold
+1062,148,2024-02-29,Home & Garden,  Lamp,4,46.7,186.8,Mobile Payment,Airport,29.0,No,Silver
+1232,121,2024-02-19,Clothing,  SNEAKERS ,4,278.93,1115.72,Mobile Payment,Downtown,42.0,No,Silver
+1265,161,2024-04-30,Clothing,Jacket,5,302.0,1510.0,Debit Card,Online,59.0,No,Gold
+1225,204,2024-10-02,Sports,  Tennis Racket,4,305.76,1223.04,Debit Card,Downtown,42.0,No,Silver
+1313,225,2024-03-10,Clothing,  jeans,1,390.59,390.59,Mobile Payment,Airport,41.0,No,Silver
+1357,242,2024-07-17,Grocery,  Eggs ,1,346.79,346.79,Credit Card,Airport,,Yes,Gold
+1160,161,2024-08-20,Electronics,SMARTPHONE,2,424.71,849.42,Mobile Payment,Online,59.0,Yes,Gold
+1103,221,2024-07-08,Home & Garden,  Curtains,1,330.91,330.91,Credit Card,,,No,Bronze
+1311,225,2024-12-09,Grocery,CHEESE,4,154.32,617.28,Mobile Payment,Mall,51.0,No,Bronze
+1373,214,2024-12-22,Sports,BICYCLE  ,4,261.29,1045.16,Cash,Airport,34.0,No,Bronze
+1345,104,2024-10-03,Electronics,  Headphones,3,257.21,771.63,Cash,Downtown,120.0,No,Silver
+1338,123,2024-08-02,Sports,  Basketball,5,,,Credit Card,Online,32.0,No,Bronze
+1366,175,2024-10-27,Electronics,SMARTPHONE,1,151.29,151.29,Credit Card,Downtown,51.0,Yes,Silver
+1085,156,2024-03-20,Grocery,CHEESE,5,32.01,160.05,Credit Card,Online,43.0,No,Silver
+1282,203,2024-07-31,Electronics,SMARTPHONE,1,449.47,449.47,Debit Card,Airport,,Yes,Bronze
+1244,162,2024-12-01,Clothing,dress,2,477.56,955.12,Debit Card,Online,70.0,Yes,Silver
+1066,178,2024-02-20,Grocery,bread,2,249.97,499.94,Mobile Payment,Airport,40.0,Yes,Bronze
+1065,248,2024-09-07,Home & Garden,  Curtains,5,,,Debit Card,Online,49.0,No,Bronze
+1273,194,2024-11-11,Sports,BICYCLE  ,4,252.29,1009.16,Mobile Payment,Mall,68.0,No,Gold
+1424,221,2024-07-27,Clothing,  SNEAKERS ,3,299.0,897.0,Mobile Payment,Online,48.0,No,Bronze
+1249,241,2024-05-23,Home & Garden,plant pot,1,266.5,266.5,Mobile Payment,Mall,56.0,Yes,Bronze
+1044,235,2024-01-17,Electronics,SMARTPHONE,1,488.96,488.96,Credit Card,,120.0,No,Silver
+1418,188,2024-12-19,Clothing,  SNEAKERS ,3,493.51,1480.53,Cash,Downtown,50.0,No,Gold
+1376,208,2024-07-08,Home & Garden,RUG  ,5,467.29,2336.45,Debit Card,Airport,26.0,No,Bronze
+1124,240,2024-04-21,Grocery,bread,5,70.33,351.65,Mobile Payment,Online,46.0,Yes,Silver
+1030,184,2024-08-15,Electronics,Smart Watch  ,1,431.1,431.1,Cash,Online,28.0,No,Bronze
+1123,190,2024-08-15,Home & Garden,plant pot,2,286.35,572.7,Mobile Payment,Suburb,32.0,No,Bronze
+1158,216,2024-04-30,Electronics,tablet,3,185.88,557.64,Credit Card,Online,22.0,Yes,Silver
+1356,169,2024-07-04,Home & Garden,RUG  ,1,343.06,343.06,Mobile Payment,Airport,50.0,Yes,Silver
+1331,178,2024-02-20,Sports,  Tennis Racket,2,382.55,765.1,Debit Card,Airport,59.0,No,Silver
+1010,164,2024-12-17,Grocery,MILK  ,5,477.45,2387.25,Cash,Online,35.0,Yes,Silver
+1251,159,2024-07-07,Clothing,  jeans,2,386.33,772.66,Credit Card,Mall,31.0,No,Platinum
+1166,130,2024-10-05,Home & Garden,plant pot,4,13.26,53.04,Mobile Payment,Suburb,27.0,No,Silver
+1307,149,2024-11-26,Electronics,Smart Watch  ,1,38.43,38.43,Debit Card,,29.0,No,Bronze
+1001,180,2024-07-02,Grocery,bread,3,134.78,404.34,Debit Card,Suburb,28.0,Yes,Gold
+1272,130,2024-02-01,Clothing,  jeans,2,24.71,49.42,Credit Card,Suburb,41.0,Yes,Bronze
+1277,237,2024-07-22,Electronics,tablet,5,34.93,174.65,Debit Card,Airport,56.0,No,Silver
+1083,147,2024-05-21,Grocery,bread,2,395.7,791.4,Debit Card,,63.0,No,Bronze
+1192,149,2024-04-07,Electronics,SMARTPHONE,5,255.77,1278.85,Debit Card,Mall,70.0,Yes,Bronze
+1348,155,2024-03-03,Grocery,  Eggs ,4,316.14,1264.56,Debit Card,Airport,25.0,No,Platinum
+1474,223,2024-08-20,Clothing,Jacket,5,253.02,1265.1,Mobile Payment,Online,60.0,Yes,Gold
+1400,170,2024-02-16,Clothing,  SNEAKERS ,3,210.64,631.92,Credit Card,Online,32.0,No,Silver
+1320,250,2024-12-05,Electronics,tablet,4,352.4,1409.6,Cash,Suburb,44.0,Yes,Silver
+1153,234,2024-04-18,Grocery,CHEESE,2,45.8,91.6,Cash,Online,69.0,No,Bronze
+1055,172,2024-11-24,Home & Garden,plant pot,1,270.6,270.6,Debit Card,Suburb,39.0,No,Bronze
+1260,125,2024-11-23,Clothing,Jacket,5,309.94,1549.7,Mobile Payment,Online,64.0,No,Bronze
+1092,149,2024-11-01,Home & Garden,  Lamp,3,,,Debit Card,Mall,25.0,No,Silver
+1257,175,2024-01-11,Home & Garden,RUG  ,1,158.4,158.4,Debit Card,Mall,48.0,Yes,Silver
+1431,158,2024-01-26,Sports,BICYCLE  ,1,258.1,258.1,Mobile Payment,Mall,61.0,Yes,Silver
+1002,192,2024-06-19,Electronics,  Headphones,4,105.58,422.32,Credit Card,Online,48.0,Yes,Bronze
+1460,145,2024-05-04,Electronics,  Headphones,2,404.99,809.98,Cash,,48.0,Yes,Platinum
+1081,177,2024-03-05,Electronics,tablet,1,270.51,270.51,Mobile Payment,Suburb,31.0,No,Silver
+1223,103,2024-10-16,Grocery,MILK  ,3,198.41,595.23,Cash,,55.0,Yes,Silver
+1432,236,2024-04-15,Clothing,Jacket,5,318.98,1594.9,Mobile Payment,Mall,28.0,No,Silver
+1014,132,2024-02-05,Clothing,T-SHIRT  ,5,418.09,2090.45,Mobile Payment,Online,59.0,No,Silver
+1456,170,2024-10-10,Sports,dumbbells,5,342.12,1710.6,Debit Card,Online,44.0,No,Bronze
+1329,111,2024-04-16,Sports,  Basketball,4,37.73,150.92,Credit Card,Suburb,19.0,No,Bronze
+1405,113,2024-10-27,Sports,dumbbells,3,350.84,1052.52,Cash,Downtown,33.0,Yes,Gold
+1437,241,2024-04-20,Home & Garden,  Curtains,1,366.33,366.33,Credit Card,Suburb,20.0,No,Bronze
+1059,174,2024-04-29,Electronics,tablet,3,424.0,1272.0,Debit Card,Online,26.0,Yes,Bronze
+1006,132,2024-06-17,Grocery,  Eggs ,4,33.66,134.64,Mobile Payment,Airport,54.0,Yes,Bronze
+1284,225,2024-03-16,Clothing,  jeans,4,47.68,190.72,Cash,Online,55.0,Yes,Bronze
+1129,126,2024-11-01,Grocery,MILK  ,2,,,Credit Card,,28.0,Yes,Gold
+1271,103,2024-01-02,Electronics,Smart Watch  ,3,229.42,688.26,Cash,Airport,26.0,Yes,Silver
+1240,246,2024-05-21,Electronics,tablet,5,306.37,1531.85,Cash,Online,58.0,Yes,Silver
+1406,172,2024-03-15,Clothing,dress,4,158.1,632.4,Cash,Suburb,50.0,No,Bronze
+1196,220,2024-03-07,Home & Garden,plant pot,4,372.14,1488.56,Credit Card,,20.0,No,Silver
+1198,222,2024-10-03,Sports,YOGA MAT  ,2,371.63,743.26,Cash,Downtown,54.0,Yes,Silver
+1033,212,2024-05-08,Home & Garden,  Lamp,5,64.12,320.6,Credit Card,Online,27.0,No,Bronze
+1306,187,2024-03-30,Electronics,Smart Watch  ,4,355.41,1421.64,Mobile Payment,Downtown,21.0,Yes,Silver
+1003,147,2024-02-26,Electronics,Smart Watch  ,1,352.24,352.24,Credit Card,Downtown,28.0,Yes,Bronze
+1459,113,2024-12-04,Home & Garden,PILLOW  ,5,86.1,430.5,Debit Card,,34.0,Yes,Silver
+1430,164,2024-01-14,Sports,YOGA MAT  ,3,476.74,1430.22,Cash,Mall,29.0,Yes,Silver
+1079,222,2024-03-08,Sports,  Basketball,2,263.89,527.78,Debit Card,Downtown,51.0,Yes,Bronze
+1057,129,2024-01-08,Electronics,Smart Watch  ,1,392.58,392.58,Debit Card,Downtown,43.0,No,Bronze
+1025,116,2024-07-02,Sports,YOGA MAT  ,1,361.78,361.78,Mobile Payment,Mall,56.0,Yes,Silver
+1047,202,2024-05-01,Sports,YOGA MAT  ,3,87.65,262.95,Mobile Payment,Suburb,54.0,No,Silver
+1253,225,2024-10-28,Clothing,T-SHIRT  ,2,67.83,135.66,Credit Card,Mall,58.0,No,Gold
+1261,118,2024-06-14,Clothing,T-SHIRT  ,4,391.66,1566.64,Credit Card,Suburb,19.0,No,Silver
+1071,247,2024-01-09,Grocery,  Eggs ,2,138.04,276.08,Cash,Suburb,64.0,No,Bronze
+1387,113,2024-03-30,Home & Garden,plant pot,4,443.78,1775.12,Debit Card,Mall,64.0,No,Bronze
+1428,138,2024-05-15,Electronics,  Headphones,3,386.86,1160.58,Mobile Payment,Downtown,60.0,No,Silver
+1205,138,2024-01-27,Sports,  Basketball,3,19.53,58.59,Mobile Payment,Suburb,70.0,Yes,Bronze
+1299,244,2024-03-05,Grocery,MILK  ,1,404.52,404.52,Cash,Mall,36.0,No,Silver
+1220,177,2024-08-03,Clothing,T-SHIRT  ,1,139.63,139.63,Mobile Payment,Online,23.0,Yes,Platinum
+1300,121,2024-09-26,Sports,BICYCLE  ,1,36.62,36.62,Debit Card,,31.0,Yes,Silver
+1135,163,2024-02-28,Home & Garden,PILLOW  ,3,357.6,1072.8,Debit Card,Suburb,46.0,Yes,Bronze
+1276,130,2024-02-02,Clothing,  SNEAKERS ,4,290.44,1161.76,Cash,Airport,200.0,No,Silver
+1475,242,2024-08-31,Electronics,  Headphones,3,43.15,129.45,Debit Card,Downtown,48.0,No,Silver
+1127,206,2024-08-17,Sports,  Tennis Racket,3,230.32,690.96,Credit Card,Online,48.0,Yes,Silver
+1008,157,2024-07-04,Grocery,MILK  ,1,183.26,183.26,Debit Card,Online,28.0,No,Platinum
+1442,233,2024-09-19,Electronics,tablet,2,252.31,504.62,Credit Card,Mall,32.0,Yes,Bronze
+1074,197,2024-10-30,Sports,dumbbells,1,285.61,285.61,Mobile Payment,Online,44.0,Yes,Platinum
+1235,215,2024-02-25,Sports,dumbbells,2,187.01,374.02,Credit Card,Airport,56.0,No,Gold
+1330,213,2024-08-19,Sports,  Basketball,4,131.28,525.12,Cash,Mall,27.0,No,Bronze
+1203,176,2024-09-14,Sports,  Basketball,4,55.94,223.76,Cash,Online,68.0,Yes,Bronze
+1256,250,2024-04-23,Sports,BICYCLE  ,5,289.09,1445.45,Cash,Suburb,55.0,Yes,Bronze
+1336,209,2024-11-10,Electronics,SMARTPHONE,5,,,Cash,,70.0,Yes,Bronze
+1377,178,2024-01-23,Home & Garden,RUG  ,5,118.06,590.3,Cash,Airport,67.0,No,Bronze
+1381,245,2024-12-03,Home & Garden,  Lamp,4,256.87,1027.48,Debit Card,Airport,29.0,No,Silver
+1368,115,2024-09-23,Electronics,SMARTPHONE,1,26.8,26.8,Mobile Payment,Airport,57.0,Yes,Bronze
+1291,125,2024-06-03,Home & Garden,  Curtains,1,432.15,432.15,Credit Card,Suburb,60.0,Yes,Bronze
+1109,153,2024-08-22,Grocery,MILK  ,1,126.05,126.05,Credit Card,Online,150.0,Yes,Gold
+1034,154,2024-11-25,Grocery,  Apples,3,238.52,715.56,Mobile Payment,Downtown,34.0,No,Bronze
+1138,167,2024-01-16,Electronics,  Headphones,5,194.57,972.85,Cash,Downtown,28.0,Yes,Gold
+1206,120,2024-02-01,Grocery,  Eggs ,1,79.29,79.29,Cash,Suburb,64.0,Yes,Bronze
+1162,140,2024-09-02,Electronics,SMARTPHONE,5,465.92,2329.6,Credit Card,Mall,61.0,No,Bronze
+1483,161,2024-07-24,Grocery,bread,5,429.46,2147.3,Cash,Online,,No,Silver
+1118,144,2024-08-06,Clothing,T-SHIRT  ,3,278.67,836.01,Debit Card,,47.0,No,Silver
+1029,241,2024-12-17,Electronics,  Laptop ,4,,,Debit Card,Mall,56.0,No,Gold
+1167,119,2024-02-25,Sports,dumbbells,1,371.63,371.63,Debit Card,Suburb,55.0,Yes,Silver
+1351,140,2024-09-08,Grocery,CHEESE,3,212.59,637.77,Mobile Payment,Online,22.0,Yes,Gold
+1468,100,2024-12-30,Clothing,dress,4,164.29,657.16,Mobile Payment,Online,32.0,Yes,Bronze
+1286,204,2024-08-15,Electronics,  Laptop ,4,211.05,844.2,Debit Card,Online,42.0,No,Bronze
+1353,215,2024-02-07,Grocery,bread,1,361.54,361.54,Mobile Payment,Mall,42.0,No,Gold
+1015,220,2024-02-11,Sports,dumbbells,5,139.27,696.35,Debit Card,Mall,26.0,No,Gold
+1139,174,2024-06-13,Grocery,  Eggs ,2,43.55,87.1,Cash,Suburb,24.0,Yes,Platinum
+1464,108,2024-11-07,Clothing,dress,5,189.54,947.7,Mobile Payment,,19.0,No,Silver
+1237,159,2024-03-16,Home & Garden,RUG  ,5,253.51,1267.55,Debit Card,,,Yes,Bronze
+1410,173,2024-02-03,Home & Garden,  Curtains,2,451.46,902.92,Mobile Payment,Downtown,51.0,Yes,Gold
+1010,172,2024-03-05,Clothing,  jeans,4,93.78,375.12,Credit Card,Mall,50.0,Yes,Bronze
+1439,216,2024-05-20,Clothing,dress,2,403.15,806.3,Credit Card,Mall,61.0,Yes,Platinum
+1274,118,2024-11-15,Electronics,  Headphones,2,490.8,981.6,Debit Card,Online,120.0,No,Gold
+1088,159,2024-11-20,Home & Garden,plant pot,3,477.27,1431.81,Debit Card,Downtown,70.0,No,Silver
+1412,167,2024-10-26,Electronics,SMARTPHONE,3,39.12,117.36,Debit Card,Airport,27.0,Yes,Gold
+1312,250,2024-10-07,Grocery,  Apples,3,235.22,705.66,Credit Card,Downtown,56.0,Yes,Gold
+1037,150,2024-12-30,Clothing,Jacket,4,144.74,578.96,Mobile Payment,Airport,24.0,No,Bronze
+1332,208,2024-06-15,Electronics,SMARTPHONE,2,423.2,846.4,Credit Card,Suburb,29.0,Yes,Gold
+1350,129,2024-07-14,Clothing,  SNEAKERS ,1,167.01,167.01,Debit Card,Online,48.0,No,Silver
+1471,239,2024-11-01,Electronics,tablet,2,278.78,557.56,Debit Card,Suburb,57.0,Yes,Gold
+1137,157,2024-09-28,Grocery,MILK  ,4,8.94,35.76,Debit Card,Mall,56.0,Yes,Bronze
+1344,138,2024-05-30,Grocery,  Apples,3,104.33,312.99,Debit Card,,20.0,Yes,Gold
+1108,168,2024-08-20,Sports,dumbbells,4,284.08,1136.32,Debit Card,Online,68.0,No,Bronze
+1182,136,2024-09-15,Home & Garden,plant pot,3,155.44,466.32,Debit Card,Suburb,52.0,Yes,Bronze
+1190,118,2024-11-05,Sports,BICYCLE  ,4,313.25,1253.0,Cash,Downtown,50.0,No,Gold
+1084,115,2024-08-08,Home & Garden,PILLOW  ,1,234.64,234.64,Cash,Suburb,66.0,Yes,Bronze
+1187,142,2024-02-20,Grocery,MILK  ,3,297.89,893.67,Cash,Airport,25.0,Yes,Bronze
+1326,178,2024-12-25,Electronics,Smart Watch  ,3,249.21,747.63,Credit Card,Mall,23.0,Yes,Platinum
+1233,245,2024-02-28,Clothing,  SNEAKERS ,2,387.44,774.88,Mobile Payment,Downtown,48.0,No,Platinum
+1455,173,2024-12-01,Grocery,  Eggs ,4,101.73,406.92,Debit Card,Mall,60.0,Yes,Silver
+1448,212,2024-11-29,Grocery,CHEESE,5,450.72,2253.6,Cash,Suburb,26.0,No,Silver
+1052,131,2024-10-09,Electronics,tablet,5,381.44,1907.2,Credit Card,Online,56.0,Yes,Silver
+1479,219,2024-04-20,Grocery,  Apples,2,126.34,252.68,Mobile Payment,Downtown,52.0,Yes,Bronze
+1445,177,2024-08-08,Grocery,  Eggs ,4,8.16,32.64,Debit Card,Online,70.0,No,Bronze
+1149,203,2024-08-19,Electronics,  Laptop ,1,207.97,207.97,Debit Card,Suburb,18.0,Yes,Silver
+1396,169,2024-04-26,Grocery,MILK  ,2,120.33,240.66,Mobile Payment,Airport,67.0,Yes,Gold
+1117,228,2024-07-30,Home & Garden,PILLOW  ,3,176.48,529.44,Mobile Payment,Online,61.0,Yes,Gold
+1339,238,2024-06-22,Home & Garden,  Curtains,1,420.59,420.59,Mobile Payment,Online,59.0,No,Gold
+1024,226,2024-08-20,Home & Garden,plant pot,4,439.21,1756.84,Credit Card,,45.0,Yes,Bronze
+1036,212,2024-07-23,Home & Garden,PILLOW  ,3,475.74,1427.22,Cash,Downtown,51.0,No,Silver
+1361,120,2024-07-31,Grocery,  Apples,5,5.72,28.6,Debit Card,Suburb,44.0,No,Bronze
+1099,110,2024-02-18,Clothing,Jacket,4,330.37,1321.48,Cash,Online,41.0,No,Silver
+1296,210,2024-06-09,Home & Garden,  Curtains,3,425.26,1275.78,Mobile Payment,Mall,20.0,Yes,Silver
+1186,182,2024-08-06,Home & Garden,PILLOW  ,4,,,Debit Card,Mall,62.0,Yes,Gold
+1317,164,2024-06-09,Grocery,  Eggs ,3,56.45,169.35,Debit Card,Online,51.0,No,Bronze
+1322,106,2024-12-06,Sports,dumbbells,4,267.26,1069.04,Cash,Downtown,45.0,No,Bronze
+1425,123,2024-05-10,Grocery,bread,5,122.89,614.45,Cash,Online,32.0,Yes,Bronze
+1151,158,2024-07-10,Electronics,tablet,2,248.55,497.1,Debit Card,Mall,69.0,No,Gold
+1283,247,2024-03-19,Home & Garden,RUG  ,3,34.65,103.95,Credit Card,,48.0,Yes,Silver
+1041,250,2024-12-17,Electronics,Smart Watch  ,3,498.49,1495.47,Mobile Payment,Online,68.0,No,Bronze
+1194,105,2024-08-30,Home & Garden,  Lamp,5,357.27,1786.35,Cash,Online,67.0,No,Bronze
+1064,168,2024-02-04,Sports,dumbbells,2,51.05,102.1,Debit Card,Airport,42.0,No,Silver
+1275,247,2024-02-16,Clothing,Jacket,4,461.03,1844.12,Cash,Downtown,40.0,No,Bronze
+1236,110,2024-02-13,Sports,YOGA MAT  ,3,449.16,1347.48,Debit Card,Suburb,55.0,Yes,Gold
+1374,144,2024-02-17,Grocery,  Apples,2,262.28,524.56,Credit Card,Mall,69.0,Yes,Silver
+1023,220,2024-08-09,Grocery,  Apples,4,351.92,1407.68,Cash,Mall,65.0,No,Bronze
+1414,232,2024-02-19,Electronics,  Headphones,3,189.38,568.14,Debit Card,Suburb,66.0,No,Bronze
+1136,213,2024-07-09,Electronics,tablet,3,487.4,1462.2,Cash,Suburb,62.0,No,Platinum
+1310,171,2024-03-07,Grocery,MILK  ,4,47.03,188.12,Debit Card,Suburb,54.0,No,Bronze
+1177,146,2024-10-11,Grocery,  Eggs ,5,52.31,261.55,Mobile Payment,Suburb,24.0,Yes,Bronze
+1434,249,2024-01-31,Grocery,CHEESE,2,71.09,142.18,Debit Card,Mall,45.0,Yes,Gold
+1184,211,2024-10-27,Home & Garden,plant pot,3,410.88,1232.64,Debit Card,Online,26.0,Yes,Platinum
+1050,225,2024-10-14,Sports,  Basketball,4,42.04,168.16,Debit Card,Online,34.0,No,Platinum
+1195,123,2024-10-14,Home & Garden,plant pot,3,286.07,858.21,Debit Card,Airport,48.0,No,Gold
+1481,220,2024-06-17,Clothing,Jacket,4,220.32,881.28,Mobile Payment,Online,67.0,No,Bronze
+1006,189,2024-12-09,Home & Garden,RUG  ,3,482.29,1446.87,Credit Card,Downtown,32.0,No,Bronze
+1173,204,2024-03-03,Grocery,MILK  ,1,122.2,122.2,Mobile Payment,Downtown,23.0,No,Gold
+1391,185,2024-07-29,Home & Garden,PILLOW  ,5,134.19,670.95,Credit Card,Suburb,36.0,Yes,Silver
+1111,182,2024-06-30,Electronics,SMARTPHONE,2,160.93,321.86,Credit Card,,56.0,No,Silver
+1080,126,2024-12-06,Grocery,  Eggs ,5,401.4,2007.0,Mobile Payment,Mall,52.0,Yes,Gold
+1465,141,2024-08-04,Sports,YOGA MAT  ,5,351.86,1759.3,Cash,Online,44.0,Yes,Bronze
+1175,184,2024-01-27,Home & Garden,  Curtains,2,369.0,738.0,Credit Card,Online,34.0,No,Silver
+1484,205,2024-05-27,Grocery,CHEESE,5,162.44,812.2,Mobile Payment,Mall,30.0,Yes,Bronze
+1358,226,2024-11-03,Electronics,tablet,1,139.62,139.62,Debit Card,Downtown,18.0,No,Silver
+1082,173,2024-06-08,Electronics,  Headphones,4,41.97,167.88,Mobile Payment,Suburb,63.0,Yes,Bronze
+1413,202,2024-06-29,Home & Garden,RUG  ,2,105.34,210.68,Credit Card,Airport,65.0,No,Bronze
+1389,240,2024-02-23,Grocery,  Eggs ,4,391.07,1564.28,Cash,Downtown,68.0,Yes,Bronze
+1004,109,2024-10-22,Sports,BICYCLE  ,3,294.43,883.29,Cash,Airport,18.0,No,Silver
+1446,216,2024-09-16,Clothing,  jeans,1,81.93,81.93,Cash,,54.0,Yes,Silver
+1415,122,2024-04-18,Electronics,SMARTPHONE,4,86.37,345.48,Debit Card,Online,51.0,No,Silver
+1143,180,2024-03-20,Clothing,dress,4,235.7,942.8,Mobile Payment,Suburb,25.0,No,Platinum
+1302,164,2024-12-02,Sports,  Basketball,2,206.22,412.44,Mobile Payment,Downtown,51.0,No,Bronze
+1230,182,2024-09-03,Home & Garden,RUG  ,3,270.28,810.84,Cash,Online,18.0,No,Bronze
+1113,129,2024-04-24,Electronics,  Headphones,2,482.49,964.98,Debit Card,Suburb,42.0,Yes,Gold
+1215,203,2024-02-25,Clothing,dress,3,107.78,323.34,Cash,Online,59.0,Yes,Bronze
+1002,231,2024-06-28,Electronics,tablet,2,157.61,315.22,Credit Card,Online,31.0,Yes,Platinum
+1360,100,2024-10-11,Clothing,T-SHIRT  ,4,136.18,544.72,Mobile Payment,Airport,62.0,Yes,Bronze
+1333,238,2024-07-07,Grocery,CHEESE,4,64.36,257.44,Debit Card,Airport,69.0,Yes,Platinum
+1367,218,2024-02-28,Grocery,  Apples,1,83.02,83.02,Cash,Downtown,38.0,Yes,Bronze
+1102,205,2024-05-22,Home & Garden,  Lamp,4,344.6,1378.4,Debit Card,Suburb,44.0,Yes,Gold
+1288,113,2024-10-20,Sports,BICYCLE  ,5,414.06,2070.3,Credit Card,Mall,,Yes,Silver
+1014,148,2024-04-25,Electronics,Smart Watch  ,4,349.95,1399.8,Credit Card,Suburb,24.0,Yes,Platinum
+1309,232,2024-08-07,Sports,YOGA MAT  ,5,24.96,124.8,Mobile Payment,Online,27.0,No,Bronze
+1259,192,2024-10-14,Clothing,dress,4,418.78,1675.12,Debit Card,,45.0,Yes,Silver
+1120,227,2024-11-14,Home & Garden,RUG  ,5,167.26,836.3,Cash,Downtown,59.0,Yes,Platinum
+1112,213,2024-11-10,Grocery,MILK  ,5,50.15,250.75,Cash,Mall,55.0,Yes,Silver
+1048,113,2024-12-11,Grocery,MILK  ,4,127.87,511.48,Cash,Online,34.0,No,Silver
+1016,152,2024-11-25,Home & Garden,plant pot,5,181.09,905.45,Mobile Payment,Online,34.0,No,Silver
+1017,168,2024-10-12,Electronics,Smart Watch  ,1,259.16,259.16,Credit Card,Downtown,52.0,No,Silver
+1217,240,2024-01-14,Sports,  Tennis Racket,3,,,Cash,Downtown,45.0,Yes,Silver
+1303,133,2024-11-07,Clothing,T-SHIRT  ,5,133.78,668.9,Mobile Payment,Mall,54.0,No,Silver
+1045,173,2024-12-02,Sports,YOGA MAT  ,5,,,Mobile Payment,Mall,41.0,Yes,Gold
+1280,212,2024-12-21,Grocery,CHEESE,1,20.39,20.39,Mobile Payment,Airport,57.0,Yes,Bronze
+1457,224,2024-05-16,Home & Garden,  Curtains,1,205.17,205.17,Mobile Payment,Downtown,35.0,Yes,Bronze
+1012,131,2024-01-15,Grocery,  Apples,2,228.84,457.68,Mobile Payment,Mall,61.0,Yes,Platinum
+1347,107,2024-04-02,Grocery,CHEESE,3,375.3,1125.9,Mobile Payment,Online,43.0,No,Gold
+1053,161,2024-05-19,Clothing,  SNEAKERS ,2,128.68,257.36,Credit Card,Airport,66.0,Yes,Silver
+1378,140,2024-12-25,Electronics,  Laptop ,5,,,Credit Card,Downtown,,No,Silver
+1072,179,2024-06-07,Electronics,  Headphones,1,402.93,402.93,Cash,Mall,,Yes,Bronze
+1115,241,2024-06-22,Clothing,  jeans,5,74.2,371.0,Debit Card,Downtown,53.0,No,Bronze
+1126,103,2024-06-28,Home & Garden,RUG  ,4,10.92,43.68,Credit Card,Airport,68.0,No,Silver
+1141,241,2024-01-04,Sports,  Tennis Racket,3,416.03,1248.09,Debit Card,Suburb,53.0,No,Bronze
+1380,204,2024-04-02,Home & Garden,  Curtains,4,491.37,1965.48,Cash,Downtown,48.0,Yes,Silver
+1013,123,2024-03-14,Sports,BICYCLE  ,1,69.7,69.7,Credit Card,Downtown,29.0,No,Bronze
+1058,157,2024-10-16,Electronics,  Laptop ,1,412.72,412.72,Credit Card,Downtown,41.0,Yes,Platinum
+1328,129,2024-12-02,Grocery,CHEESE,1,189.26,189.26,Cash,Downtown,53.0,Yes,Platinum
