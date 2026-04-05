@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Kickoff Activity</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #F5E6D3 0%, #FFF8F0 50%, #F5E6D3 100%);
+            color: #3a3028;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 3px solid #C65D00;
+            margin-bottom: 2rem;
+        }
+
+        header h1 { font-size: 2.2rem; color: #8B7355; margin-bottom: 0.3rem; }
+        header p { font-size: 1.1rem; color: #C65D00; font-weight: 600; }
+        .subtitle { font-size: 0.95rem; color: #7a6b5a; margin-top: 0.5rem; }
+
+        .phase {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+            border-left: 5px solid #C65D00;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .phase-number {
+            background: #C65D00;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .phase h2 { font-size: 1.3rem; color: #8B7355; }
+        .phase-time { font-size: 0.85rem; color: #C65D00; font-weight: 600; }
+
+        .phase h3 {
+            font-size: 1.05rem;
+            color: #C65D00;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.88rem;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        pre .comment { color: #6a9955; }
+        pre .cmd { color: #dcdcaa; }
+        pre .flag { color: #9cdcfe; }
+        pre .branch { color: #ce9178; }
+        pre .output { color: #808080; }
+        pre .you { color: #4ec9b0; }
+
+        ol {
+            padding-left: 1.8rem;
+        }
+
+        ol li {
+            padding: 0.3rem 0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 0.5rem 0;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .checklist li::before {
+            content: '\25B8';
+            color: #C65D00;
+            font-size: 1rem;
+            position: absolute;
+            left: 0;
+        }
+
+        .tip {
+            background: #e8f5e9;
+            border: 2px solid #66bb6a;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .tip strong { color: #2e7d32; }
+
+        .warning {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .warning strong { color: #e65100; }
+
+        .celebrate {
+            background: linear-gradient(135deg, #C65D00, #8B7355);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .celebrate strong { font-size: 1.2rem; display: block; margin-bottom: 0.3rem; }
+
+        .scenario-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .scenario-card {
+            background: #faf5ef;
+            border: 2px solid #C65D00;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .scenario-card h4 { color: #8B7355; margin-bottom: 0.3rem; }
+
+        ul { margin-left: 1.5rem; margin-top: 0.3rem; }
+        li { margin-bottom: 0.3rem; }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #8B7355;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .scenario-box { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Team Kickoff Activity</h1>
+            <p>Your First Session as an AI Consulting Team</p>
+            <p class="subtitle">Open your <strong>Git Team Guide</strong> and keep it handy &mdash; you'll need it.</p>
+        </header>
+
+        <!-- PHASE 1 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">1</div>
+                <div>
+                    <h2>Meet Your Team</h2>
+                    <div class="phase-time">~10 minutes</div>
+                </div>
+            </div>
+
+            <p>Welcome to your consulting team. Before you touch any code, get to know each other.</p>
+
+            <h3>Go Around the Room</h3>
+            <ul class="checklist">
+                <li>One thing you're excited about for this project</li>
+                <li>One thing you're nervous about</li>
+                <li>Your schedule &mdash; when can you work outside of class? Any conflicts in the next 7 weeks?</li>
+            </ul>
+
+            <h3>Quick Team Decisions</h3>
+            <ul class="checklist">
+                <li>Brainstorm your <strong>consulting firm name</strong> &mdash; you'll need this in Phase 3 when you create your GitHub team (e.g., "NeuralEdge Consulting", "DeepVision AI")</li>
+                <li>One person creates a <strong>private Slack channel</strong> using your firm name (e.g., #team-neuraledge) and invites everyone</li>
+                <li>One person creates a <strong>shared Google Doc</strong> for team notes &mdash; post the link in your Slack channel and pin it so everyone can find it anytime</li>
+                <li>Pick a regular time for your team check-ins outside of class &mdash; <strong>schedule it for an hour</strong>, even if some weeks you only need 15 minutes. Once you agree, one person creates a <strong>recurring Google Calendar invite</strong> for 7 weeks and adds everyone. As the project ramps up, you may need more check-ins throughout the week &mdash; be prepared for that. There will be some class time to work together (like today), but not every session will be like this.</li>
+                <li>Discuss initial role preferences (Data Engineering, ML/DNN, CNN, NLP) &mdash; no final decisions yet, just first impressions. Write them down in your shared Google Doc.</li>
+            </ul>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">2</div>
+                <div>
+                    <h2>Talk About the Project</h2>
+                    <div class="phase-time">~10 minutes</div>
+                </div>
+            </div>
+
+            <p>You've read the Project Preview. Now discuss it as a team.</p>
+
+            <div class="scenario-box">
+                <div class="scenario-card">
+                    <h4>Healthcare</h4>
+                    <ul>
+                        <li>Readmission prediction</li>
+                        <li>Retinal scan classification</li>
+                        <li>Patient feedback NLP</li>
+                        <li>+ Your innovation model</li>
+                    </ul>
+                </div>
+                <div class="scenario-card">
+                    <h4>Smart City</h4>
+                    <ul>
+                        <li>Accident severity prediction</li>
+                        <li>Pothole detection</li>
+                        <li>Complaint classification NLP</li>
+                        <li>+ Your innovation model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Discuss</h3>
+            <ul class="checklist">
+                <li>Which models sound most interesting to each of you?</li>
+                <li>What feels like the hardest part?</li>
+                <li>Any skills or experience someone brings that could help? (web dev, stats, design, etc.)</li>
+                <li>Beyond the model roles, your team also needs a <strong>Business Lead</strong> (owns the presentation, ROI story, and client communication) and a <strong>Web Dev Lead</strong> (owns the web app and deployment). Who's drawn to those?</li>
+                <li>What questions do you have for Abishek?</li>
+                <li>Jot down your discussion notes in your shared Google Doc &mdash; you'll want to reference these later</li>
+            </ul>
+
+            <div class="tip">
+                <strong>Reminder:</strong> Data will be shared with you tomorrow. Tonight is about understanding the problem, getting your tools set up, and learning to work together in Git. No data work yet.
+            </div>
+        </div>
+
+        <!-- PHASE 3: Think Like a Consultant -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">3</div>
+                <div>
+                    <h2>Think Like a Consultant</h2>
+                    <div class="phase-time">~20 minutes</div>
+                </div>
+            </div>
+
+            <p>Before you touch any code or data, good consultants take time to <strong>understand the problem</strong>. In the real world, you never jump straight into the data &mdash; you think it through first. Open your shared Google Doc and take a first pass at these questions as a team:</p>
+
+            <h3>Understanding the Problem</h3>
+            <ul class="checklist">
+                <li>What is the client actually trying to solve? In your own words, what's the core problem?</li>
+                <li>Who are the end users of these models? What do they care about most?</li>
+                <li>What would success look like for each of the 5 models? How would the client measure impact?</li>
+            </ul>
+
+            <h3>Expectations Before Seeing the Data</h3>
+            <ul class="checklist">
+                <li>What do you <em>expect</em> the data to look like? What columns, what formats, what messiness?</li>
+                <li>What challenges do you anticipate? (missing values, class imbalance, noisy text, image quality)</li>
+                <li>What would surprise you? What would be a red flag?</li>
+            </ul>
+
+            <h3>Planning Your Approach</h3>
+            <ul class="checklist">
+                <li>What's the first thing you'd want to do when you get the data?</li>
+                <li>What skills does each model require? (traditional ML, neural networks, computer vision, NLP)</li>
+                <li>What do you think will be the hardest model to build? The easiest? Why?</li>
+                <li>What tools and libraries do you think you'll need?</li>
+            </ul>
+
+            <div class="tip">
+                <strong>Why this matters:</strong> Writing down your expectations <em>before</em> you see the data is a powerful habit. When you finally open the data tomorrow, you'll immediately notice what matches your expectations and what doesn't &mdash; and that's where the real insights are. This is how experienced data scientists and consultants work.
+            </div>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">4</div>
+                <div>
+                    <h2>Get the Repo on Your Machine</h2>
+                    <div class="phase-time">~5 minutes</div>
+                </div>
+            </div>
+
+            <p><strong>Everyone</strong> does this individually. One person can share their screen so the group can follow along and help each other if someone gets stuck.</p>
+
+            <h3>Step 0: Accept the GitHub Classroom Assignment</h3>
+            <ol>
+                <li>Click the <strong>GitHub Classroom link</strong> provided by Abishek</li>
+                <li><strong>First person</strong> on your team: Create your team name using <strong>your consulting firm name</strong> (e.g., "NeuralEdge-Consulting" or "DeepVision-AI")</li>
+                <li><strong>Everyone else</strong>: Select your existing team name from the list &mdash; do NOT create a new one</li>
+                <li>GitHub Classroom creates <strong>one shared repo</strong> for your entire team. Everyone gets push access automatically.</li>
+            </ol>
+
+            <h3>Step by Step: Clone to Your Machine</h3>
+
+            <pre><span class="comment"># 1. Go to your team's repo on GitHub (the link from GitHub Classroom)</span>
+
+<span class="comment"># 2. Click the green "Code" button, copy the HTTPS URL</span>
+
+<span class="comment"># 3. Open your terminal and navigate to where you keep projects</span>
+<span class="cmd">cd</span> ~/Desktop   <span class="comment"># or wherever you like to keep code</span>
+
+<span class="comment"># 4. Clone the repo</span>
+<span class="cmd">git clone</span> <span class="branch">https://github.com/your-org/your-team-repo.git</span>
+
+<span class="comment"># 5. Move into the repo</span>
+<span class="cmd">cd</span> your-team-repo
+
+<span class="comment"># 6. Confirm you're on main and see the starter files</span>
+<span class="cmd">git branch</span>
+<span class="output">* main</span>
+
+<span class="cmd">ls</span>
+<span class="output">README.md  requirements.txt  models/  notebooks/  ...</span></pre>
+
+            <ul class="checklist">
+                <li>Everyone confirms they can see the repo files on their local machine</li>
+                <li>Everyone runs <code>git branch</code> and sees <code>* main</code></li>
+            </ul>
+
+            <div class="warning">
+                <strong>Troubleshooting:</strong> If <code>git clone</code> asks for a password, you may need to set up a GitHub Personal Access Token or SSH key. Work together as a team to figure it out &mdash; Google is your friend. Check the <strong>Git Team Guide</strong> for help.
+            </div>
+        </div>
+
+        <!-- PHASE 5 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">5</div>
+                <div>
+                    <h2>Your First Branch &mdash; Edit an Existing File</h2>
+                    <div class="phase-time">~15 minutes</div>
+                </div>
+            </div>
+
+            <p><strong>Everyone</strong> does this individually, at the same time. You're each going to create your own branch, edit the same file, and push it.</p>
+
+            <h3>Step 1: Create Your Branch</h3>
+            <pre><span class="comment"># Make sure you're on main first</span>
+<span class="cmd">git checkout</span> <span class="branch">main</span>
+
+<span class="comment"># Create a new branch with YOUR name</span>
+<span class="cmd">git checkout</span> <span class="flag">-b</span> <span class="branch">setup/yourname-intro</span>
+
+<span class="comment"># Example:</span>
+<span class="cmd">git checkout</span> <span class="flag">-b</span> <span class="branch">setup/maria-intro</span></pre>
+
+            <div class="tip">
+                <strong>Note:</strong> We're using the <code>setup/</code> prefix for this kickoff exercise. When working on the actual project, you'll use prefixes like <code>feature/</code>, <code>fix/</code>, <code>data/</code>, etc. as described in the <strong>Git Team Guide</strong>.
+            </div>
+
+            <h3>Step 2: Edit the README</h3>
+            <p>Open <code>README.md</code> in your code editor. Find the <strong>Team Roles</strong> section at the bottom. Add your name next to a role.</p>
+
+            <p>The README has a section that looks like this:</p>
+            <pre><span class="comment">## Team Members</span>
+
+| Role | Name |
+|------|------|
+| Data Engineering Lead | (your name here) |
+| ML / DNN Lead | (your name here) |
+| CNN Lead | (your name here) |
+| NLP Lead | (your name here) |</pre>
+
+            <p><strong>Each person picks a different row</strong> and replaces <code>(your name here)</code> with their actual name. (These aren't final role assignments &mdash; just for this exercise.)</p>
+
+            <h3>Step 3: Commit and Push</h3>
+            <pre><span class="comment"># Check what changed</span>
+<span class="cmd">git status</span>
+<span class="output">modified:   README.md</span>
+
+<span class="comment"># Stage the file</span>
+<span class="cmd">git add</span> README.md
+
+<span class="comment"># Commit with a clear message</span>
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Add Maria as CNN Lead in team roster"</span>
+
+<span class="comment"># Push YOUR branch to GitHub</span>
+<span class="cmd">git push</span> <span class="flag">origin</span> <span class="branch">setup/maria-intro</span></pre>
+
+            <ul class="checklist">
+                <li>Everyone has pushed their branch</li>
+                <li>Go to GitHub in your browser &mdash; you should see 4 new branches</li>
+            </ul>
+        </div>
+
+        <!-- PHASE 6 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">6</div>
+                <div>
+                    <h2>Your First Branch &mdash; Create a New File</h2>
+                    <div class="phase-time">~5 minutes</div>
+                </div>
+            </div>
+
+            <p><strong>On the same branch</strong>, each person creates a new file. This is to practice adding files, not just editing them.</p>
+
+            <h3>Create a Personal Intro File</h3>
+            <p>In the <code>notebooks/</code> folder, create a new file called <code>intro_yourname.md</code></p>
+
+            <pre><span class="comment"># Create the file (or use your code editor)</span></pre>
+
+            <p>Put this in the file (fill in your answers):</p>
+            <pre><span class="comment"># About Me - [Your Name]</span>
+
+<span class="you">**Role:** [The role you picked above]</span>
+<span class="you">**Excited about:** [One thing]</span>
+<span class="you">**Superpower I bring:** [A skill, even if it's not technical]</span>
+<span class="you">**Fun fact:** [Something about you]</span></pre>
+
+            <h3>Commit and Push Again</h3>
+            <pre><span class="comment"># Stage the new file</span>
+<span class="cmd">git add</span> notebooks/intro_yourname.md
+
+<span class="comment"># Commit</span>
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Add personal intro file for Maria"</span>
+
+<span class="comment"># Push (same branch as before)</span>
+<span class="cmd">git push</span> <span class="flag">origin</span> <span class="branch">setup/maria-intro</span></pre>
+
+            <ul class="checklist">
+                <li>Everyone has 2 commits on their branch (README edit + new file)</li>
+            </ul>
+        </div>
+
+        <!-- PHASE 7 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">7</div>
+                <div>
+                    <h2>Merge Time &mdash; Pull Requests</h2>
+                    <div class="phase-time">~25 minutes</div>
+                </div>
+            </div>
+
+            <p>Now comes the team part. You'll merge each person's branch into <code>main</code>, one at a time. <strong>Do this together as a group &mdash; share one screen.</strong></p>
+
+            <h3>Person 1 Goes First (The Easy One)</h3>
+            <ol>
+                <li>Go to your repo on GitHub</li>
+                <li>You'll see a banner: <em>"setup/person1-intro had recent pushes"</em> &rarr; Click <strong>"Compare & pull request"</strong></li>
+                <li>Title: <code>Add [Name] to team roster</code></li>
+                <li>Click <strong>"Create pull request"</strong></li>
+                <li>Have a teammate look at the changes ("Files changed" tab)</li>
+                <li>Teammate clicks <strong>"Approve"</strong> (or just gives a thumbs up in chat)</li>
+                <li>Click <strong>"Merge pull request"</strong> &rarr; <strong>"Confirm merge"</strong></li>
+                <li>Click <strong>"Delete branch"</strong> (keeps things clean)</li>
+            </ol>
+
+            <div class="tip">
+                <strong>This first merge will go smoothly</strong> because nobody else has changed <code>main</code> yet. Enjoy it &mdash; the next ones get more interesting.
+            </div>
+
+            <h3>Person 2 Goes Next (The Merge Conflict)</h3>
+            <p>Person 2 also edited <code>README.md</code> &mdash; and since everyone edited the same section of the same file, you <strong>will</strong> get a merge conflict. This is intentional &mdash; you'll all practice resolving conflicts in a low-stakes setting before it matters on real code.</p>
+
+            <p><strong>When you get a merge conflict</strong>, here's what to do:</p>
+            <ol>
+                <li>GitHub will show you: <em>"This branch has conflicts that must be resolved"</em></li>
+                <li>Click <strong>"Resolve conflicts"</strong></li>
+                <li>You'll see the conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
+                <li><strong>As a team</strong>, decide what the file should look like (keep both names!)</li>
+                <li>Delete the conflict markers, keep the correct content</li>
+                <li>Click <strong>"Mark as resolved"</strong> &rarr; <strong>"Commit merge"</strong></li>
+                <li>Now you can merge the PR</li>
+            </ol>
+
+            <div class="warning">
+                <strong>This is the whole point of this exercise.</strong> Merge conflicts are normal and not scary. You just resolved your first one as a team. In the real project, this is exactly how you'll handle it when two people edit the same file.
+            </div>
+
+            <h3>Everyone Else Merges</h3>
+            <p>All remaining team members create their PRs at the same time &mdash; don't wait for each other. Since everyone edited the same section of <code>README.md</code>, <strong>expect merge conflicts on every PR after the first one</strong>. That's the whole point &mdash; by the time you're done, every person on the team will have seen and resolved a merge conflict. <strong>Work through them together as a team.</strong> This is real teamwork &mdash; everyone helping everyone.</p>
+
+            <ul class="checklist">
+                <li>All 4 branches are merged into main</li>
+                <li>All 4 branches are deleted on GitHub</li>
+                <li>README.md on main has all 4 team member names</li>
+                <li>notebooks/ folder has 4 intro files</li>
+            </ul>
+        </div>
+
+        <!-- PHASE 8 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">8</div>
+                <div>
+                    <h2>Sync Up &mdash; Everyone Pulls Main</h2>
+                    <div class="phase-time">~3 minutes</div>
+                </div>
+            </div>
+
+            <p><strong>Everyone</strong> does this individually. Get the merged changes onto your local machine.</p>
+
+            <pre><span class="comment"># Switch back to main</span>
+<span class="cmd">git checkout</span> <span class="branch">main</span>
+
+<span class="comment"># Pull all the merged changes</span>
+<span class="cmd">git pull</span> <span class="flag">origin</span> <span class="branch">main</span>
+
+<span class="comment"># Verify: you should see everyone's changes</span>
+<span class="cmd">cat</span> README.md        <span class="comment"># All 4 names in the table</span>
+<span class="cmd">ls</span> notebooks/         <span class="comment"># All 4 intro files</span>
+
+<span class="comment"># Clean up your old local branch</span>
+<span class="cmd">git branch</span> <span class="flag">-d</span> <span class="branch">setup/yourname-intro</span></pre>
+
+            <ul class="checklist">
+                <li>Everyone's local <code>main</code> has all 4 names and all 4 intro files</li>
+                <li>Everyone has deleted their old local branch</li>
+            </ul>
+
+            <div class="celebrate">
+                <strong>You just completed your first team Git workflow.</strong>
+                You created branches, made changes, pushed, opened PRs, handled merge conflicts, merged, and synced. This is exactly how you'll work for the next 7 weeks.
+            </div>
+        </div>
+
+        <!-- PHASE 9 -->
+        <div class="phase">
+            <div class="phase-header">
+                <div class="phase-number">9</div>
+                <div>
+                    <h2>Recap &amp; Next Steps</h2>
+                    <div class="phase-time">~5 minutes</div>
+                </div>
+            </div>
+
+            <h3>What You Practiced Tonight</h3>
+            <ul>
+                <li><strong>Cloning</strong> &mdash; Getting the repo on your machine</li>
+                <li><strong>Branching</strong> &mdash; Working on your own copy of the code</li>
+                <li><strong>Committing</strong> &mdash; Saving your work with clear messages</li>
+                <li><strong>Pushing</strong> &mdash; Sending your branch to GitHub</li>
+                <li><strong>Pull Requests</strong> &mdash; Proposing changes for the team to review</li>
+                <li><strong>Merge Conflicts</strong> &mdash; Resolving overlapping changes as a team</li>
+                <li><strong>Pulling</strong> &mdash; Syncing everyone's changes to your machine</li>
+            </ul>
+
+            <h3>Before Next Class</h3>
+            <ul class="checklist">
+                <li>Read your scenario's client meeting document (will be shared tomorrow with data)</li>
+                <li>Bookmark the <strong>Git Team Guide</strong> &mdash; you'll reference it constantly</li>
+                <li>Make sure your Python environment is set up: <code>pip install -r requirements.txt</code></li>
+                <li>Discuss with your team (on Slack): initial thoughts on role assignments</li>
+            </ul>
+
+            <h3>This Isn't Like the Individual Capstone</h3>
+            <div class="tip">
+                When you explore the repo, you'll notice the <code>notebooks/</code> folder is empty. Unlike the individual capstone, there's no pre-built starter code walking you through each step. You're given the folder structure, some testing scripts, output templates, and requirements &mdash; but <strong>how you build it is up to you</strong>. This is intentional. It's a lot more open-ended, and that's what makes it closer to real-world work. Your team decides the approach, writes the code from scratch, and owns every decision.
+            </div>
+
+            <h3>A Real Talk About Time</h3>
+            <div class="tip">
+                This capstone will require <strong>5&ndash;15 hours per week outside of class</strong> from each team member. That's the reality of building 5 AI models, a web app, and a presentation in 7 weeks. One weekly check-in is a good start, but as the project ramps up you'll likely need more. <strong>These 7 weeks go fast.</strong> The teams that succeed are the ones that communicate constantly, use their time together wisely, and don't wait until the last minute. Stay active in your Slack channel, ask for help early, and treat every hour like it counts &mdash; because it does.
+            </div>
+            <div class="tip">
+                <strong>Accountability:</strong> Abishek will have periodic checkpoints throughout the project to review where each team stands. Your progress will be seen &mdash; so stay on track, keep your repo updated, and don't let things pile up at the end.
+            </div>
+
+            <h3>The #1 Rule Going Forward</h3>
+            <div class="celebrate">
+                <strong>Never push to main. Always use a branch. Always pull before you push.</strong>
+                When in doubt, check the Git Team Guide or ask Abishek.
+            </div>
+        </div>
+
+        <footer>
+            <p>AI & Machine Learning Bootcamp &mdash; Final Capstone Kickoff</p>
+        </footer>
+
+    </div>
+</body>
+</html>

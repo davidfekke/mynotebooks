@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Portfolio Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #F5E6D3 0%, #E8D5C4 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #3D3D3D;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(139, 115, 85, 0.15);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B7355 0%, #6B5344 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            padding: 30px 40px;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D3 100%);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-number {
+            flex-shrink: 0;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #C65D00 0%, #A04D00 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .section-header h2 {
+            color: #6B5344;
+            font-size: 1.4rem;
+        }
+
+        .section-body {
+            margin-left: 60px;
+        }
+
+        .section-body p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .section-body h3 {
+            color: #8B7355;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .code-block {
+            background: #2D2D2D;
+            color: #F8F8F2;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .code-block .comment {
+            color: #6A9955;
+        }
+
+        .code-block .highlight {
+            color: #DCDCAA;
+        }
+
+        .warning {
+            background: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 12px 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .tip {
+            background: #D4EDDA;
+            border-left: 4px solid #28A745;
+            padding: 12px 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .info {
+            background: #D1ECF1;
+            border-left: 4px solid #17A2B8;
+            padding: 12px 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        /* Hosting comparison table */
+        .hosting-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.92rem;
+        }
+
+        .hosting-table th {
+            background: linear-gradient(135deg, #8B7355 0%, #6B5344 100%);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .hosting-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E8D5C4;
+            vertical-align: top;
+        }
+
+        .hosting-table tr:nth-child(even) {
+            background: #FFF8F0;
+        }
+
+        .hosting-table tr.recommended {
+            background: #D4EDDA;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .badge-free { background: #D4EDDA; color: #155724; }
+        .badge-easy { background: #D1ECF1; color: #0C5460; }
+        .badge-medium { background: #FFF3CD; color: #856404; }
+        .badge-hard { background: #F8D7DA; color: #721C24; }
+        .badge-recommended { background: #C65D00; color: white; }
+
+        /* README template */
+        .readme-template {
+            background: #F6F8FA;
+            border: 1px solid #D0D7DE;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 15px 0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .readme-template .md-heading {
+            color: #0550AE;
+            font-weight: bold;
+        }
+
+        .readme-template .md-comment {
+            color: #6A737D;
+            font-style: italic;
+        }
+
+        .subsection {
+            background: #FAFAFA;
+            border: 1px solid #E8D5C4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .subsection h4 {
+            color: #C65D00;
+            margin-bottom: 10px;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .checklist li::before {
+            content: "\2610";
+            position: absolute;
+            left: 0;
+            color: #C65D00;
+            font-size: 1.2rem;
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px solid #E8D5C4;
+            margin: 30px 0;
+        }
+
+        footer {
+            background: #F5E6D3;
+            padding: 20px 40px;
+            text-align: center;
+            color: #6B5344;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content { padding: 20px; }
+            .section-body { margin-left: 0; margin-top: 15px; }
+            .section-header { flex-wrap: wrap; }
+            header { padding: 20px; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Capstone Portfolio Guide</h1>
+            <p>Take your project from classroom assignment to portfolio piece</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                You built a machine learning application from scratch &mdash; dataset selection, data cleaning, feature engineering, models, and a deployed web app. That's real work worth showing off. This guide walks you through making your capstone <strong>portfolio-ready</strong>: getting it on your personal GitHub, writing a README that makes people want to click, and keeping your app live for anyone to try.
+            </div>
+
+            <!-- SECTION 1: Personal GitHub -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <h2>Get It on Your Personal GitHub</h2>
+                </div>
+                <div class="section-body">
+                    <p>Right now your capstone lives under the <code>fsa-aiml-2511-classroom</code> organization. That's fine for school, but for your portfolio you want it on <strong>your personal GitHub profile</strong> where recruiters and hiring managers will actually see it.</p>
+
+                    <p>Most of you probably already have a personal copy of your repo. If so, you're good &mdash; skip ahead to Section 2. If not, here's how to set it up:</p>
+
+                    <h3>Option A: You Already Have a Personal Repo</h3>
+                    <p>If you've already been pushing to your own GitHub account, just make sure your latest code is pushed and you're all set. Move on to updating your README.</p>
+
+                    <h3>Option B: Create a New Personal Repo</h3>
+
+                    <div class="code-block">
+<span class="comment"># 1. Go to github.com and create a new empty repository</span>
+<span class="comment">#    Name it something clean like: housing-price-predictor</span>
+<span class="comment">#    (NOT "individual-capstone-yourname")</span>
+<span class="comment">#    Do NOT add a README, .gitignore, or license — keep it empty</span>
+
+<span class="comment"># 2. In your terminal, go to your existing capstone project</span>
+cd ~/path/to/your/capstone-project
+
+<span class="comment"># 3. Add your personal repo as a new remote</span>
+git remote add personal https://github.com/<span class="highlight">YOUR-USERNAME</span>/<span class="highlight">YOUR-REPO-NAME</span>.git
+
+<span class="comment"># 4. Push everything to your personal repo</span>
+git push personal main
+
+<span class="comment"># 5. Verify it worked — go to your new repo on GitHub and check</span>
+                    </div>
+
+                    <div class="tip">
+                        <strong>Pick a good repo name.</strong> Something like <code>housing-price-predictor</code>, <code>health-risk-classifier</code>, or <code>movie-recommendation-app</code> tells people what it does at a glance. Avoid generic names like <code>capstone</code> or <code>ml-project</code>.
+                    </div>
+
+                    <div class="info">
+                        <strong>Note:</strong> This keeps your original classroom repo intact. You're not deleting anything &mdash; just creating a copy on your personal profile.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- SECTION 2: README -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <h2>Write a Portfolio-Ready README</h2>
+                </div>
+                <div class="section-body">
+                    <p>Your README is the <strong>first thing</strong> anyone sees when they visit your repo. The template README from the assignment was great for building the project, but now you want something that sells what you built. Replace it with something like this:</p>
+
+                    <div class="readme-template"><span class="md-heading"># Your Project Title</span>
+
+<span class="md-comment">&lt;!-- One line that explains what this does --&gt;</span>
+A machine learning web app that predicts [what it predicts] based on [key inputs].
+
+<span class="md-comment">&lt;!-- If your app is hosted, put the link right here --&gt;</span>
+**[Try the live app](https://your-app-url.streamlit.app)**
+
+![App Screenshot](docs/screenshot.png)
+
+<span class="md-heading">## The Problem</span>
+<span class="md-comment">&lt;!-- 2-3 sentences: what question are you answering and why it matters --&gt;</span>
+
+<span class="md-heading">## What It Does</span>
+- Takes user inputs for [key features]
+- Runs a trained [model type] model to predict [target]
+- Also classifies results into [categories] using [classification model]
+- Displays results with visualizations in an interactive Streamlit app
+
+<span class="md-heading">## Key Findings</span>
+<span class="md-comment">&lt;!-- 3-4 bullet points about what you learned from the data --&gt;</span>
+
+<span class="md-heading">## Tech Stack</span>
+- **Python** &mdash; Pandas, NumPy, Scikit-Learn
+- **Streamlit** &mdash; Interactive web application
+- **Models** &mdash; [Your regression model], [Your classification model]
+
+<span class="md-heading">## Run It Locally</span>
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+cd YOUR-REPO
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app/main.py
+```
+
+<span class="md-heading">## Project Structure</span>
+```
+├── app/              &larr; Streamlit application
+├── data/             &larr; Dataset (raw and processed)
+├── models/           &larr; Trained model files
+├── notebooks/        &larr; EDA, feature engineering, modeling
+└── requirements.txt
+```</div>
+
+                    <div class="tip">
+                        <strong>Add a screenshot.</strong> Take a screenshot of your Streamlit app, save it as <code>docs/screenshot.png</code>, and reference it in the README. A visual makes a huge difference &mdash; people can see what your app looks like without even running it.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- SECTION 3: Hosting -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <h2>Host Your App So Anyone Can Use It</h2>
+                </div>
+                <div class="section-body">
+                    <p>A live link in your README or on your resume is worth way more than "clone this repo and run it yourself." Here are your main options:</p>
+
+                    <table class="hosting-table">
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Cost</th>
+                                <th>Difficulty</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="recommended">
+                                <td>
+                                    <strong>Streamlit Community Cloud</strong><br>
+                                    <span class="badge badge-recommended">Recommended</span>
+                                </td>
+                                <td><span class="badge badge-free">Free</span></td>
+                                <td><span class="badge badge-easy">Easy</span></td>
+                                <td>Connect your GitHub repo, pick your file, done. Built specifically for Streamlit apps. No Docker, no config files, no deploy scripts.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hugging Face Spaces</strong></td>
+                                <td><span class="badge badge-free">Free</span></td>
+                                <td><span class="badge badge-easy">Easy</span></td>
+                                <td>Good if you want visibility in the ML community. Supports Streamlit natively. Your app shows up on Hugging Face alongside other ML projects.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Render</strong></td>
+                                <td><span class="badge badge-free">Free tier</span></td>
+                                <td><span class="badge badge-medium">Medium</span></td>
+                                <td>More general-purpose hosting. Requires a little more config but good to learn. Free tier has similar sleep behavior to Streamlit Cloud.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Railway</strong></td>
+                                <td>Free trial,<br>then ~$5/mo</td>
+                                <td><span class="badge badge-medium">Medium</span></td>
+                                <td>More control over your environment. Good developer experience. Costs money after the trial period.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Self-Hosting</strong><br>(your own website/VPS)</td>
+                                <td>Varies</td>
+                                <td><span class="badge badge-hard">Advanced</span></td>
+                                <td>Full control &mdash; run it on a VPS (DigitalOcean, AWS, etc.) or embed it in your own portfolio site. Requires managing a server, domain, SSL, and keeping things running. A great learning experience, but a whole separate project in itself.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="warning">
+                        <strong>Heads up about free tier sleep behavior:</strong> On Streamlit Community Cloud (and most free tiers), your app goes to sleep if nobody uses it for a while. When someone visits after it's been sleeping, it takes 30&ndash;60 seconds to wake back up and load. This is totally normal and expected on free hosting &mdash; it's not broken, it just needs a moment to spin up. Your app will work fine once it's loaded.
+                    </div>
+
+                    <h3>My Recommendation: Streamlit Community Cloud</h3>
+                    <p>For most of you, this is the move. It's free, it's made for exactly what you built, and it takes about 2 minutes to deploy:</p>
+
+                    <div class="subsection">
+                        <h4>Quick Deploy Steps</h4>
+                        <ol style="line-height: 2; padding-left: 20px;">
+                            <li>Go to <strong>share.streamlit.io</strong> and sign in with GitHub</li>
+                            <li>Click <strong>"New app"</strong></li>
+                            <li>Select your repository and branch (<code>main</code>)</li>
+                            <li>Set the main file path to <code>app/main.py</code> (or wherever your Streamlit app lives)</li>
+                            <li>Click <strong>"Deploy"</strong> &mdash; that's it</li>
+                        </ol>
+                    </div>
+
+                    <div class="tip">
+                        <strong>Make sure your <code>requirements.txt</code> is accurate.</strong> Streamlit Cloud installs your dependencies from this file. If your app uses a package that's not listed, the deploy will fail. Also remove <code>notebook</code> and <code>ipykernel</code> from requirements if they're there &mdash; those are for local development only and can slow down or break the deploy.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- SECTION 4: Polish -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <h2>Final Polish</h2>
+                </div>
+                <div class="section-body">
+                    <p>A few more things that take 5 minutes each but make a real difference:</p>
+
+                    <div class="subsection">
+                        <h4>Add Custom Theming to Your App</h4>
+                        <p>I highly recommend this one. You can customize your Streamlit app's colors and fonts by adding a config file. Create a <code>.streamlit/config.toml</code> file in your project root:</p>
+                        <div class="code-block">
+<span class="comment"># .streamlit/config.toml</span>
+
+[theme]
+primaryColor = "#C65D00"          <span class="comment"># Buttons, sliders, links</span>
+backgroundColor = "#FFFFFF"        <span class="comment"># Main background</span>
+secondaryBackgroundColor = "#F5E6D3" <span class="comment"># Sidebar background</span>
+textColor = "#3D3D3D"             <span class="comment"># Main text</span>
+font = "sans serif"
+                        </div>
+                        <p>Change the colors to whatever fits your project. It doesn't need to be beautiful &mdash; just some intentional design choices make it stick out and not feel like default Streamlit. That small effort signals that you care about the end product.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Record a Demo Video</h4>
+                        <p>Free hosting can go down. A 30&ndash;60 second screen recording of your app in action is insurance. The best approach: <strong>upload it as an unlisted YouTube video</strong> and link it in your README. Unlisted means only people with the link can find it, but it's easy to share and never goes down. Walk through the app, enter some inputs, show the predictions.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Pin the Repo on Your GitHub Profile</h4>
+                        <p>Go to your GitHub profile, click <strong>"Customize your pins"</strong>, and pin your capstone repo. This makes it the first thing anyone sees when they visit your GitHub. You get 6 pins &mdash; this project should be one of them.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h4>Add It to LinkedIn</h4>
+                        <p>Two places to put it:</p>
+                        <ul style="padding-left: 20px; line-height: 2;">
+                            <li><strong>Projects section</strong> &mdash; Add the project with a description, the live app link, and the GitHub link</li>
+                            <li><strong>A post (optional)</strong> &mdash; Write a short post about what you built. Include the live link and a screenshot. This is definitely optional, but you may be surprised by how much engagement you get. People look at your post history &mdash; having a project post on there shows you're building real things.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- CHECKLIST -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">&check;</div>
+                    <h2>Portfolio Checklist</h2>
+                </div>
+                <div class="section-body">
+                    <ul class="checklist">
+                        <li>Project is on your personal GitHub with a clean repo name</li>
+                        <li>README has been updated with project description, screenshot, and how to run it</li>
+                        <li>App is deployed and the live link is in your README</li>
+                        <li>requirements.txt only has production dependencies</li>
+                        <li>Repo is pinned on your GitHub profile</li>
+                        <li>Demo video recorded (backup for when the app is sleeping)</li>
+                        <li>Added to LinkedIn profile and/or posted about it</li>
+                        <li>Custom theme added via .streamlit/config.toml</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>You built this.</strong> A real ML application, end to end. Make sure the world can see it.</p>
+            <p style="margin-top: 10px;">If you want a final look from me before you launch it to your network, send me a message on Slack &mdash; happy to give feedback.</p>
+            <p style="margin-top: 5px;">&mdash; Abishek Ganesh</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Team Collaboration Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #F5E6D3 0%, #FFF8F0 50%, #F5E6D3 100%);
+            color: #3a3028;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 3px solid #C65D00;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            color: #8B7355;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #C65D00;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #7a6b5a;
+            margin-top: 0.5rem;
+        }
+
+        .golden-rule {
+            background: linear-gradient(135deg, #C65D00, #8B7355);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+        }
+
+        .golden-rule strong { font-size: 1.3rem; display: block; margin-bottom: 0.3rem; }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+            border-left: 5px solid #C65D00;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            color: #8B7355;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            color: #C65D00;
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            body { padding: 1rem; }
+        }
+
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.88rem;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        pre .comment { color: #6a9955; }
+        pre .cmd { color: #dcdcaa; }
+        pre .flag { color: #9cdcfe; }
+        pre .branch { color: #ce9178; }
+        pre .output { color: #808080; }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .do {
+            background: #f0f9f0;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .dont {
+            background: #fef0f0;
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .do h4 { color: #2e7d32; margin-bottom: 0.5rem; }
+        .dont h4 { color: #c62828; margin-bottom: 0.5rem; }
+
+        ul { margin-left: 1.2rem; margin-top: 0.3rem; }
+        li { margin-bottom: 0.4rem; }
+
+        .warning {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .warning strong { color: #e65100; }
+
+        .tip {
+            background: #e8f5e9;
+            border: 2px solid #66bb6a;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .tip strong { color: #2e7d32; }
+
+        .workflow-steps {
+            counter-reset: step;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .workflow-steps li {
+            counter-increment: step;
+            padding: 0.8rem 0 0.8rem 3rem;
+            position: relative;
+            border-left: 2px solid #C65D00;
+            margin-bottom: 0;
+        }
+
+        .workflow-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: -14px;
+            top: 0.7rem;
+            width: 28px;
+            height: 28px;
+            background: #C65D00;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.8rem 0;
+        }
+
+        th {
+            background: #8B7355;
+            color: white;
+            padding: 0.6rem 1rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 0.6rem 1rem;
+            border-bottom: 1px solid #e0d5c5;
+        }
+
+        tr:nth-child(even) { background: #faf5ef; }
+
+        .cheat-sheet {
+            background: linear-gradient(135deg, #2d2d2d, #3a3a3a);
+            color: #f8f8f2;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cheat-sheet h2 { color: #dcdcaa; }
+        .cheat-sheet h3 { color: #9cdcfe; }
+        .cheat-sheet p, .cheat-sheet li { color: #d4d4d4; }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #8B7355;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Git Team Collaboration Guide</h1>
+            <p>Working Together Without Breaking Everything</p>
+            <p class="subtitle">Final Capstone Project &mdash; AI & ML Bootcamp</p>
+        </header>
+
+        <div class="golden-rule">
+            <strong>The Golden Rule of Team Git</strong>
+            Never push directly to <code>main</code>. Always work on a branch. Always pull before you push.
+        </div>
+
+        <!-- KEY DEFINITIONS -->
+        <div class="section">
+            <h2>Key Git Definitions</h2>
+            <p>Before diving in, here are the terms you'll see throughout this guide and use every day:</p>
+
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>What It Means</th>
+                    <th>Analogy</th>
+                </tr>
+                <tr>
+                    <td><strong>Repository (Repo)</strong></td>
+                    <td>Your entire project folder, tracked by Git. It contains all your code, history, and branches.</td>
+                    <td>Like a shared Google Drive folder that remembers every version of every file</td>
+                </tr>
+                <tr>
+                    <td><strong>Clone</strong></td>
+                    <td>Download a copy of a remote repo to your computer so you can work on it locally.</td>
+                    <td>Like downloading a shared folder to your laptop for the first time</td>
+                </tr>
+                <tr>
+                    <td><strong>Branch</strong></td>
+                    <td>A separate copy of the code where you can make changes without affecting anyone else's work.</td>
+                    <td>Like making a duplicate of a Google Doc to edit your section, then merging it back</td>
+                </tr>
+                <tr>
+                    <td><strong>Commit</strong></td>
+                    <td>A snapshot of your changes with a message describing what you did. Think of it as a save point.</td>
+                    <td>Like hitting "Save" in a video game &mdash; you can always go back to this point</td>
+                </tr>
+                <tr>
+                    <td><strong>Stage (git add)</strong></td>
+                    <td>Select which changed files you want to include in your next commit.</td>
+                    <td>Like putting items in your shopping cart before checking out</td>
+                </tr>
+                <tr>
+                    <td><strong>Push</strong></td>
+                    <td>Upload your local commits to GitHub so your teammates can see them.</td>
+                    <td>Like syncing your local files up to the cloud</td>
+                </tr>
+                <tr>
+                    <td><strong>Pull</strong></td>
+                    <td>Download the latest changes from GitHub to your local machine.</td>
+                    <td>Like refreshing a shared folder to get everyone else's updates</td>
+                </tr>
+                <tr>
+                    <td><strong>Pull Request (PR)</strong></td>
+                    <td>A request on GitHub to merge your branch into <code>main</code>. Your teammate reviews it before it gets merged.</td>
+                    <td>Like submitting your draft for peer review before it goes into the final document</td>
+                </tr>
+                <tr>
+                    <td><strong>Merge</strong></td>
+                    <td>Combine changes from one branch into another (usually your feature branch into <code>main</code>).</td>
+                    <td>Like taking your edited section and folding it back into the master document</td>
+                </tr>
+                <tr>
+                    <td><strong>Merge Conflict</strong></td>
+                    <td>When two people edit the same lines of the same file and Git doesn't know which to keep.</td>
+                    <td>Like two people editing the same paragraph at the same time &mdash; someone has to decide what stays</td>
+                </tr>
+                <tr>
+                    <td><strong>Main</strong></td>
+                    <td>The primary branch &mdash; the "official" version of your project. Should always have working code.</td>
+                    <td>The final, published version of your document that everyone reads</td>
+                </tr>
+                <tr>
+                    <td><strong>Remote (Origin)</strong></td>
+                    <td>The version of your repo that lives on GitHub. <code>origin</code> is the default name for it.</td>
+                    <td>The cloud copy of your project that everyone shares</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SECTION 1: THE BASICS -->
+        <div class="section">
+            <h2>1. How Team Git Works</h2>
+            <p>In your individual capstone, you probably worked directly on <code>main</code>. That's fine when you're solo. But with 4 people editing the same codebase, you'll overwrite each other's work instantly.</p>
+
+            <p><strong>The solution: branches.</strong> Each person works on their own copy of the code (a branch), then merges it back when it's ready and reviewed.</p>
+
+            <h3>The Flow</h3>
+            <pre><span class="comment"># Your daily workflow:</span>
+main (protected) ──────────────────────────────────────▶
+  │                                    ▲
+  ├── feature/model1-xgboost ─────────┤  (merge via Pull Request)
+  │                                    │
+  ├── feature/model3-cnn ─────────────┤
+  │                                    │
+  └── feature/webapp-dashboard ────────┘</pre>
+
+            <p><strong>Think of it like Google Docs:</strong> Instead of everyone typing in the same document at once, each person makes a copy, works on their section, then merges it back into the master document when done.</p>
+        </div>
+
+        <!-- SECTION 2: SETTING UP -->
+        <div class="section">
+            <h2>2. Setting Up Your Team Repo</h2>
+
+            <h3>First Time Only (Everyone)</h3>
+            <pre><span class="comment"># Clone the team repo</span>
+<span class="cmd">git clone</span> https://github.com/your-org/your-team-repo.git
+<span class="cmd">cd</span> your-team-repo
+
+<span class="comment"># Check you're on main</span>
+<span class="cmd">git branch</span>
+<span class="output">* main</span>
+
+<span class="comment"># Install dependencies</span>
+<span class="cmd">pip install</span> <span class="flag">-r</span> requirements.txt</pre>
+
+            <h3>Protect Main Branch (Team Lead Does This Once)</h3>
+            <p>On GitHub: <strong>Settings &rarr; Branches &rarr; Add rule</strong> for <code>main</code></p>
+            <ul>
+                <li>Check "Require a pull request before merging"</li>
+                <li>Check "Require approvals" (set to 1)</li>
+                <li>This prevents anyone from pushing directly to main</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 3: DAILY WORKFLOW -->
+        <div class="section">
+            <h2>3. Your Daily Workflow</h2>
+
+            <ol class="workflow-steps">
+                <li>
+                    <strong>Start your day: Update your local main</strong>
+                    <pre><span class="cmd">git checkout</span> <span class="branch">main</span>
+<span class="cmd">git pull</span> <span class="flag">origin</span> <span class="branch">main</span></pre>
+                </li>
+
+                <li>
+                    <strong>Create a branch for what you're working on</strong>
+                    <pre><span class="comment"># Name it clearly: feature/what-you're-doing</span>
+<span class="cmd">git checkout</span> <span class="flag">-b</span> <span class="branch">feature/model1-add-xgboost</span></pre>
+                </li>
+
+                <li>
+                    <strong>Do your work, commit often</strong>
+                    <pre><span class="comment"># Make changes to files...</span>
+
+<span class="comment"># Stage specific files (NOT git add .)</span>
+<span class="cmd">git add</span> models/model1_traditional_ml/train.py
+<span class="cmd">git add</span> models/model1_traditional_ml/predict.py
+
+<span class="comment"># Commit with a clear message</span>
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Add XGBoost model with SMOTE for class imbalance"</span></pre>
+                </li>
+
+                <li>
+                    <strong>Push your branch to GitHub</strong>
+                    <pre><span class="cmd">git push</span> <span class="flag">origin</span> <span class="branch">feature/model1-add-xgboost</span></pre>
+                </li>
+
+                <li>
+                    <strong>Open a Pull Request on GitHub</strong>
+                    <p>Go to your repo on GitHub &rarr; you'll see a "Compare & pull request" button. Click it, write a short description, and assign a teammate to review.</p>
+                </li>
+
+                <li>
+                    <strong>Teammate reviews &rarr; Approve &rarr; Merge</strong>
+                    <p>After approval, click "Merge pull request" on GitHub. Then delete the branch.</p>
+                </li>
+
+                <li>
+                    <strong>Everyone pulls the updated main</strong>
+                    <pre><span class="cmd">git checkout</span> <span class="branch">main</span>
+<span class="cmd">git pull</span> <span class="flag">origin</span> <span class="branch">main</span></pre>
+                </li>
+            </ol>
+        </div>
+
+        <!-- SECTION 4: BRANCH NAMING -->
+        <div class="section">
+            <h2>4. Branch Naming Convention</h2>
+            <p>Name branches so everyone knows what's being worked on at a glance:</p>
+
+            <table>
+                <tr>
+                    <th>Pattern</th>
+                    <th>When to Use</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>feature/...</code></td>
+                    <td>New functionality</td>
+                    <td><code>feature/model3-cnn-transfer-learning</code></td>
+                </tr>
+                <tr>
+                    <td><code>fix/...</code></td>
+                    <td>Bug fixes</td>
+                    <td><code>fix/model1-missing-values-crash</code></td>
+                </tr>
+                <tr>
+                    <td><code>data/...</code></td>
+                    <td>Data pipeline changes</td>
+                    <td><code>data/clean-encounter-nulls</code></td>
+                </tr>
+                <tr>
+                    <td><code>webapp/...</code></td>
+                    <td>Web app work</td>
+                    <td><code>webapp/add-prediction-dashboard</code></td>
+                </tr>
+                <tr>
+                    <td><code>docs/...</code></td>
+                    <td>Documentation</td>
+                    <td><code>docs/update-readme</code></td>
+                </tr>
+                <tr>
+                    <td><code>setup/...</code></td>
+                    <td>Initial setup tasks</td>
+                    <td><code>setup/maria-intro</code></td>
+                </tr>
+            </table>
+
+            <div class="do-dont">
+                <div class="do">
+                    <h4>Good Branch Names</h4>
+                    <ul>
+                        <li><code>feature/model2-dnn-architecture</code></li>
+                        <li><code>fix/cnn-image-resize-bug</code></li>
+                        <li><code>data/feature-engineering-v2</code></li>
+                    </ul>
+                </div>
+                <div class="dont">
+                    <h4>Bad Branch Names</h4>
+                    <ul>
+                        <li><code>johns-branch</code></li>
+                        <li><code>test123</code></li>
+                        <li><code>final-fix-for-real-this-time</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: MERGE CONFLICTS -->
+        <div class="section">
+            <h2>5. Merge Conflicts (Don't Panic)</h2>
+
+            <p>Merge conflicts happen when two people edit the same lines of the same file. Git doesn't know which version to keep, so it asks you to choose.</p>
+
+            <h3>What a Conflict Looks Like</h3>
+            <pre><span class="comment"># Git shows you both versions:</span>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+model = RandomForestClassifier(n_estimators=200)
+=======
+model = XGBClassifier(n_estimators=300, max_depth=6)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/model1-xgboost</pre>
+
+            <h3>How to Resolve</h3>
+            <ol>
+                <li><strong>Talk to your teammate</strong> &mdash; figure out which version is correct (or combine them)</li>
+                <li>Edit the file to keep the right code (delete the <code>&lt;&lt;&lt;&lt;</code>, <code>====</code>, and <code>&gt;&gt;&gt;&gt;</code> markers)</li>
+                <li>Stage and commit the resolved file:
+                    <pre><span class="cmd">git add</span> the-conflicted-file.py
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Resolve merge conflict: keep XGBoost implementation"</span></pre>
+                </li>
+            </ol>
+
+            <div class="tip">
+                <strong>Tip: Prevent conflicts by staying in your lane.</strong> If each person works in their own model folder (<code>models/model1_traditional_ml/</code>, <code>models/model3_cnn/</code>, etc.), you'll rarely have conflicts. The shared files (<code>pipelines/data_pipeline.py</code>, <code>webapp/app.py</code>) are where conflicts happen — communicate when editing these.
+            </div>
+        </div>
+
+        <!-- SECTION 6: UNDOING MISTAKES -->
+        <div class="section">
+            <h2>6. Undoing Mistakes (Your Safety Net)</h2>
+
+            <table>
+                <tr>
+                    <th>Situation</th>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                </tr>
+                <tr>
+                    <td>Undo changes to a file (not committed yet)</td>
+                    <td><code>git checkout -- filename.py</code></td>
+                    <td>Restores the file to last commit</td>
+                </tr>
+                <tr>
+                    <td>Unstage a file (added but not committed)</td>
+                    <td><code>git reset HEAD filename.py</code></td>
+                    <td>Removes from staging, keeps changes</td>
+                </tr>
+                <tr>
+                    <td>Undo the last commit (keep changes)</td>
+                    <td><code>git reset --soft HEAD~1</code></td>
+                    <td>Undoes commit, keeps files staged</td>
+                </tr>
+                <tr>
+                    <td>See what changed in a file</td>
+                    <td><code>git diff filename.py</code></td>
+                    <td>Shows line-by-line differences</td>
+                </tr>
+                <tr>
+                    <td>See all recent commits</td>
+                    <td><code>git log --oneline -10</code></td>
+                    <td>Shows last 10 commits, one line each</td>
+                </tr>
+                <tr>
+                    <td>Go back to a specific commit (to look at it)</td>
+                    <td><code>git checkout abc123</code></td>
+                    <td>Detached HEAD &mdash; just looking, not editing</td>
+                </tr>
+                <tr>
+                    <td>Get back to your branch after looking</td>
+                    <td><code>git checkout your-branch-name</code></td>
+                    <td>Returns to normal</td>
+                </tr>
+            </table>
+
+            <div class="warning">
+                <strong>Never run these on a team repo:</strong>
+                <ul>
+                    <li><code>git push --force</code> &mdash; overwrites everyone's work on the remote</li>
+                    <li><code>git reset --hard</code> on main &mdash; destroys commit history</li>
+                    <li><code>git rebase main</code> on a shared branch &mdash; rewrites history others depend on</li>
+                </ul>
+                If you're tempted to use any of these, <strong>ask your team or your instructor first</strong>.
+            </div>
+        </div>
+
+        <!-- SECTION 7: COMMIT MESSAGES -->
+        <div class="section">
+            <h2>7. Writing Good Commit Messages</h2>
+
+            <div class="do-dont">
+                <div class="do">
+                    <h4>Good Commits</h4>
+                    <ul>
+                        <li><code>Add SMOTE oversampling to handle class imbalance</code></li>
+                        <li><code>Fix image resize bug causing CNN crash on test set</code></li>
+                        <li><code>Add confusion matrix to Model 1 evaluation</code></li>
+                        <li><code>Update data pipeline to handle missing weight column</code></li>
+                    </ul>
+                </div>
+                <div class="dont">
+                    <h4>Bad Commits</h4>
+                    <ul>
+                        <li><code>update</code></li>
+                        <li><code>fix stuff</code></li>
+                        <li><code>asdfjkl</code></li>
+                        <li><code>final version FINAL v2</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip">
+                <strong>Tip:</strong> Commit early and often. Small commits that each do one thing are much easier to understand and undo than one giant commit that changes 15 files.
+            </div>
+        </div>
+
+        <!-- SECTION 8: DO NOT -->
+        <div class="section">
+            <h2>8. Things That Will Ruin Your Week</h2>
+
+            <table>
+                <tr>
+                    <th>Mistake</th>
+                    <th>Why It's Bad</th>
+                    <th>What to Do Instead</th>
+                </tr>
+                <tr>
+                    <td>Committing data files or model weights</td>
+                    <td>Bloats the repo, GitHub may reject pushes over 100MB</td>
+                    <td>Use <code>.gitignore</code> &mdash; it's already set up for you</td>
+                </tr>
+                <tr>
+                    <td>Everyone working on <code>main</code></td>
+                    <td>Constant conflicts, overwritten work, tears</td>
+                    <td>Always use feature branches</td>
+                </tr>
+                <tr>
+                    <td>Not pulling before starting work</td>
+                    <td>Your branch diverges, merge becomes painful</td>
+                    <td>First thing every session: <code>git pull origin main</code></td>
+                </tr>
+                <tr>
+                    <td>Using <code>git add .</code> or <code>git add -A</code></td>
+                    <td>Accidentally stages data files, secrets, junk</td>
+                    <td>Stage specific files: <code>git add path/to/file.py</code></td>
+                </tr>
+                <tr>
+                    <td>Not communicating about shared files</td>
+                    <td>Two people edit <code>app.py</code> at once &rarr; conflict</td>
+                    <td>Slack your team: "I'm editing app.py right now"</td>
+                </tr>
+                <tr>
+                    <td>Hardcoded paths like <code>/Users/john/Desktop/data.csv</code></td>
+                    <td>Works on your machine, breaks on everyone else's</td>
+                    <td>Use relative paths: <code>data/raw/data.csv</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- SECTION 8.5: GITIGNORE -->
+        <div class="section">
+            <h2>Your Safety Net: .gitignore</h2>
+
+            <p>Your repo includes a file called <code>.gitignore</code>. This tells Git which files to <strong>never track</strong> &mdash; even if they're sitting right there in your project folder. Git will pretend they don't exist.</p>
+
+            <h3>Why It Matters</h3>
+            <p>Without <code>.gitignore</code>, it's easy to accidentally commit things that don't belong in a Git repo:</p>
+            <ul>
+                <li><strong>Large data files</strong> &mdash; CSVs, images, and datasets that can be hundreds of MB. GitHub rejects files over 100MB, and once a large file is in your Git history, it's painful to remove.</li>
+                <li><strong>Model weights</strong> &mdash; Trained model files (<code>.h5</code>, <code>.pkl</code>, <code>.pt</code>) can be enormous. These should be stored separately, not in Git.</li>
+                <li><strong>API keys and secrets</strong> &mdash; <code>.env</code> files with passwords or API keys should never be committed. If you push a secret to GitHub, consider it compromised.</li>
+                <li><strong>System junk</strong> &mdash; <code>.DS_Store</code>, <code>__pycache__/</code>, <code>.ipynb_checkpoints/</code>, and other auto-generated files that just clutter the repo.</li>
+            </ul>
+
+            <h3>What's Already Configured</h3>
+            <p>The starter repo's <code>.gitignore</code> is already set up to exclude:</p>
+            <ul>
+                <li><code>data/</code> &mdash; All raw and processed data files</li>
+                <li>Model weight files (<code>*.h5</code>, <code>*.pkl</code>, <code>*.pt</code>, <code>*.joblib</code>)</li>
+                <li><code>.env</code> &mdash; Environment variables and secrets</li>
+                <li>Python cache files and Jupyter checkpoints</li>
+                <li>OS-specific files like <code>.DS_Store</code></li>
+            </ul>
+
+            <div class="warning">
+                <strong>Don't delete or modify .gitignore unless you know what you're doing.</strong> It's protecting you and your teammates from a lot of potential headaches.
+            </div>
+
+            <h3>What If You Accidentally Commit a Large File?</h3>
+            <p>If you commit a large file before <code>.gitignore</code> catches it (e.g., you added it with <code>git add</code> explicitly), here's how to fix it <strong>before you push</strong>:</p>
+            <pre><span class="comment"># Undo the last commit but keep your changes</span>
+<span class="cmd">git reset</span> <span class="flag">--soft</span> <span class="branch">HEAD~1</span>
+
+<span class="comment"># Remove the large file from staging</span>
+<span class="cmd">git reset</span> HEAD path/to/large-file.csv
+
+<span class="comment"># Make sure .gitignore covers it, then re-commit without it</span>
+<span class="cmd">git add</span> your-other-files.py
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Your commit message"</span></pre>
+
+            <p>If you already <strong>pushed</strong> a large file, don't try to fix it yourself with force commands &mdash; ask Abishek for help. It's fixable, but the steps are more involved and easy to mess up.</p>
+        </div>
+
+        <!-- CHEAT SHEET -->
+        <div class="cheat-sheet">
+            <h2>Quick Reference Cheat Sheet</h2>
+
+            <div class="grid">
+                <div>
+                    <h3>Starting Your Day</h3>
+                    <pre><span class="cmd">git checkout</span> <span class="branch">main</span>
+<span class="cmd">git pull</span> <span class="flag">origin</span> <span class="branch">main</span>
+<span class="cmd">git checkout</span> <span class="flag">-b</span> <span class="branch">feature/my-task</span></pre>
+                </div>
+
+                <div>
+                    <h3>Saving Your Work</h3>
+                    <pre><span class="cmd">git add</span> path/to/file.py
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="branch">"Clear description"</span>
+<span class="cmd">git push</span> <span class="flag">origin</span> <span class="branch">feature/my-task</span></pre>
+                </div>
+
+                <div>
+                    <h3>Keeping Your Branch Updated</h3>
+                    <pre><span class="comment"># Get latest main into your branch</span>
+<span class="cmd">git checkout</span> <span class="branch">main</span>
+<span class="cmd">git pull</span> <span class="flag">origin</span> <span class="branch">main</span>
+<span class="cmd">git checkout</span> <span class="branch">feature/my-task</span>
+<span class="cmd">git merge</span> <span class="branch">main</span></pre>
+                </div>
+
+                <div>
+                    <h3>Checking Status</h3>
+                    <pre><span class="cmd">git status</span>          <span class="comment"># What's changed?</span>
+<span class="cmd">git log</span> <span class="flag">--oneline -5</span> <span class="comment"># Recent commits</span>
+<span class="cmd">git branch</span>           <span class="comment"># What branch am I on?</span>
+<span class="cmd">git diff</span>             <span class="comment"># What did I change?</span></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 9: TEAM TIPS -->
+        <div class="section">
+            <h2>9. Team Tips That Actually Matter</h2>
+
+            <ul>
+                <li><strong>Decide who owns which folders.</strong> If Maria owns <code>models/model3_cnn/</code>, nobody else edits files in there without talking to her first.</li>
+                <li><strong>Merge to main at least twice a week.</strong> Long-lived branches that go weeks without merging become nightmare conflicts.</li>
+                <li><strong>Review each other's PRs within 24 hours.</strong> Don't let PRs sit — it blocks your teammate.</li>
+                <li><strong>Use Slack to coordinate.</strong> A quick "I'm about to edit the data pipeline" saves hours of conflict resolution.</li>
+                <li><strong>If something goes wrong, don't panic.</strong> Git keeps history of everything. Ask for help before trying to fix it yourself with force commands.</li>
+                <li><strong>Test before you push.</strong> Run your model's bulk test script before pushing. Don't break main for your teammates.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 10: PULL REQUEST TEMPLATE -->
+        <div class="section">
+            <h2>10. Pull Request Template</h2>
+            <p>When you open a PR on GitHub, include this info:</p>
+
+            <pre><span class="comment">## What I Did</span>
+- Added XGBoost model with hyperparameter tuning
+- Implemented SMOTE for class imbalance handling
+- Added SHAP feature importance analysis
+
+<span class="comment">## How to Test</span>
+- Run: python bulk_test_model1.py
+- Check: test_data/model1_results.csv matches template
+
+<span class="comment">## Notes for Reviewer</span>
+- AUC-ROC improved from 0.68 to 0.76
+- Still need to add cross-validation (will do in next PR)</pre>
+        </div>
+
+        <footer>
+            <p>AI & Machine Learning Bootcamp &mdash; Final Capstone Project</p>
+            <p>Remember: Good Git habits = good teamwork = better grade</p>
+        </footer>
+
+    </div>
+</body>
+</html>

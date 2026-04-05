@@ -1,0 +1,18 @@
+[workspace]
+authors = ["David Fekke <david@fekke.com>"]
+channels = ["conda-forge"]
+name = "unit-5-capstone"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+pandas = ">=3.0.2,<4"
+numpy = ">=2.4.3,<3"
+matplotlib = ">=3.10.8,<4"
+ipykernel = ">=7.2.0,<8"
+scikit-learn = ">=1.8.0,<2"
+nltk = ">=3.9.4,<4"
+gensim = ">=4.4.0,<5"
+seaborn = ">=0.13.2,<0.14"
